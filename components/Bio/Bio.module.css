@@ -1,0 +1,28 @@
+.bio {
+  margin-top: 200px;
+  color: var(--light-text);
+}
+
+.bio h1 {
+  font-size: 3.8rem;
+}
+
+.bio span {
+  color: var(--primary-accent-colour);
+}
+
+.bio p {
+  font-weight: bold;
+  font-size: 1.9rem;
+  line-height: 35px;
+  margin: 20px 0 40px 0;
+}
+
+.bio a {
+  color: var(--primary-accent-colour);
+  margin-left: 0.5rem;
+}
+
+.icons {
+  margin-right: 20px;
+}
