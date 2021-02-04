@@ -9,6 +9,7 @@
   line-height: 30px;
   padding: 0.5rem;
   border-radius: 25px;
+  cursor: pointer;
 }
 
 .nav a:hover {
@@ -17,5 +18,4 @@
 
 .nav a:first-of-type {
   margin-right: 1.5rem;
-  background-color: var(--secondary-accent-colour);
 }
