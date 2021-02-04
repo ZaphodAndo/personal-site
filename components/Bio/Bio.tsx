@@ -1,7 +1,5 @@
 import React from "react";
-import GithubIcon from "../Icons/GithubIcon";
-import LinkedinIcon from "../Icons/LinkedinIcon";
-import TwitterIcon from "../Icons/TwitterIcon";
+import SocialLinks from "../SocialLinks/SocialLinks";
 import styles from "./Bio.module.css";
 
 function Bio() {
@@ -14,11 +12,7 @@ function Bio() {
         Destroyer of Builds, Remover of Strings, Creator of lint errors. Currently an application developer @
         <a href="https://www.pebblepad.co.uk/">PebblePad</a>
       </p>
-      <div>
-        <GithubIcon />
-        <TwitterIcon />
-        <LinkedinIcon />
-      </div>
+      <SocialLinks colour="#FFF" />
     </div>
   );
 }
