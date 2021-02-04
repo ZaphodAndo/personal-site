@@ -11,9 +11,15 @@ type SocialLinksProps = {
 function SocialLinks({ colour }: SocialLinksProps) {
   return (
     <div className={styles.icons}>
-      <GithubIcon fill={colour} />
-      <TwitterIcon fill={colour} />
-      <LinkedinIcon fill={colour} />
+      <a href="https://github.com/ZaphodAndo" target="_blank" rel="noopener noreferrer">
+        <GithubIcon fill={colour} />
+      </a>
+      <a href="https://twitter.com/ethan_ando" target="_blank" rel="noopener noreferrer">
+        <TwitterIcon fill={colour} />
+      </a>
+      <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/" target="_blank" rel="noopener noreferrer">
+        <LinkedinIcon fill={colour} />
+      </a>
     </div>
   );
 }

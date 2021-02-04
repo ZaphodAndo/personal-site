@@ -16,7 +16,7 @@ function ProjectCard({ header, desc, link, image, imageAlt }: ProjectCardProps) 
       <div>
         <h2>{header}</h2>
         <p>{desc}</p>
-        <a href={link}>
+        <a href={link} target="_blank" rel="noopener noreferrer">
           View Code <RightArrowIcon className={styles.icon} />
         </a>
       </div>

@@ -35,7 +35,7 @@
   margin: 20px 0 40px 0;
 }
 
-.bio a {
+.bio .link {
   color: var(--primary-accent-colour);
   margin-left: 0.5rem;
 }

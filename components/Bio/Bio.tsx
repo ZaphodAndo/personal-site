@@ -13,7 +13,9 @@ function Bio() {
       </h1>
       <p>
         Destroyer of Builds, Remover of Strings, Creator of lint errors. Currently an application developer @
-        <a href="https://www.pebblepad.co.uk/">PebblePad</a>
+        <a className={styles.link} href="https://www.pebblepad.co.uk/" target="_blank" rel="noopener noreferrer">
+          PebblePad
+        </a>
       </p>
       <SocialLinks colour="#FFF" />
     </div>
