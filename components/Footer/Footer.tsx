@@ -5,7 +5,7 @@ import styles from "./Footer.module.css";
 function Footer() {
   return (
     <div className={styles.footer}>
-      <p>Ethan Anderson 2021</p>
+      <p>Ethan Anderson</p>
       <SocialLinks colour="#828282" />
     </div>
   );
