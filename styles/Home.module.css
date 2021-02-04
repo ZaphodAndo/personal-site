@@ -1,3 +1,38 @@
+.home .blob1 {
+  position: absolute;
+  z-index: 0;
+  right: -4rem;
+  top: -3rem;
+}
+
+.home .blob2 {
+  position: absolute;
+  z-index: 0;
+  right: -6rem;
+  top: 46rem;
+}
+
+.home .blob3 {
+  position: absolute;
+  z-index: 0;
+  left: -8rem;
+  top: 65rem;
+}
+
+.home .blob4 {
+  position: absolute;
+  z-index: 0;
+  right: -3rem;
+  top: 98rem;
+}
+
+.home .blob5 {
+  position: absolute;
+  z-index: 0;
+  right: -8rem;
+  top: 140rem;
+}
+
 .home .desc {
   margin-top: 80px;
 }

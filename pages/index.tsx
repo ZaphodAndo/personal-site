@@ -1,3 +1,4 @@
+import { GreenBlob, LightBlueBlob, LightPurpleBlob, PurpleBlob, YellowBlob } from "../components/Blobs/Blobs";
 import Bio from "../components/Bio/Bio";
 import RightArrowIcon from "../components/Icons/RightArrowIcon";
 import ProjectCard from "../components/ProjectCard/ProjectCard";
@@ -6,6 +7,11 @@ import styles from "../styles/Home.module.css";
 function Home() {
   return (
     <div className={styles.home}>
+      <PurpleBlob className={styles.blob1} />
+      <GreenBlob className={styles.blob2} />
+      <YellowBlob className={styles.blob3} />
+      <LightBlueBlob className={styles.blob4} />
+      <LightPurpleBlob className={styles.blob5} />
       <Bio />
       <div className={styles.desc}>
         <p className={styles.content}>

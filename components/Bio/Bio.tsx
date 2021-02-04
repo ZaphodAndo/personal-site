@@ -1,10 +1,13 @@
 import React from "react";
+import { BlueBlob } from "../Blobs/Blobs";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import styles from "./Bio.module.css";
 
 function Bio() {
   return (
     <div className={styles.bio}>
+      <img className={styles.pic} src="/images/profile-pic.png" height="88" width="88" />
+      <BlueBlob className={styles.blob} />
       <h1>
         Hi, i'm <span>Ethan.</span>
       </h1>
