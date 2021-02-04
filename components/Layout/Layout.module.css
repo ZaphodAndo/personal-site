@@ -1,6 +1,13 @@
 .content {
+  padding: 0 2rem 0 2rem;
   margin: 150px auto 150px auto;
   max-width: 704px;
   display: flex;
   flex-direction: column;
+}
+
+@media only screen and (max-width: 960px) {
+  .content {
+    margin: 4rem auto 4rem auto;
+  }
 }

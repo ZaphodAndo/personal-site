@@ -34,6 +34,8 @@
 }
 
 .home .desc {
+  position: relative;
+  z-index: 1;
   margin-top: 80px;
 }
 
@@ -48,6 +50,8 @@
 }
 
 .home .projects {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-wrap: wrap;
   gap: 40px 5px;
@@ -67,6 +71,8 @@
 }
 
 .home .info {
+  position: relative;
+  z-index: 1;
   margin-top: 200px;
 }
 
@@ -97,4 +103,21 @@
 
 .home .info .what {
   margin-top: 100px;
+}
+
+@media only screen and (max-width: 960px) {
+  .home .blob1,
+  .blob2,
+  .blob3,
+  .blob4,
+  .blob5 {
+    display: none;
+  }
+
+  .home .desc,
+  .home .projects,
+  .home .info,
+  .home .info .what {
+    margin-top: 4rem;
+  }
 }

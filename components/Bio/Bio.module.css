@@ -39,3 +39,14 @@
   color: var(--primary-accent-colour);
   margin-left: 0.5rem;
 }
+
+@media only screen and (max-width: 960px) {
+  .bio {
+    margin-top: 4rem;
+  }
+
+  .bio .pic,
+  .blob {
+    display: none;
+  }
+}

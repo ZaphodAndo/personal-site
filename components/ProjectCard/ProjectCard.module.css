@@ -30,3 +30,9 @@
   margin-left: 10px;
   transform: rotate(7.24deg);
 }
+
+@media only screen and (max-width: 750px) {
+  .projectCard img {
+    display: none;
+  }
+}
