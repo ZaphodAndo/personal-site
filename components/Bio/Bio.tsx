@@ -6,7 +6,13 @@ import styles from "./Bio.module.css";
 function Bio() {
   return (
     <div className={styles.bio}>
-      <img className={styles.pic} src="/images/profile-pic.png" height="88" width="88" />
+      <img
+        className={styles.pic}
+        src="/images/profile-pic.webp"
+        alt="Ethan sittingin a resturant"
+        height="88"
+        width="88"
+      />
       <BlueBlob className={styles.blob} />
       <h1>
         Hi, i'm <span>Ethan.</span>
