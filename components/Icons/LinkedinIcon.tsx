@@ -1,13 +1,13 @@
 import React from "react";
 
-function LinkedinIcon() {
+function LinkedinIcon({ fill }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
       fill="none"
-      stroke="#FFF"
+      stroke={fill}
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
