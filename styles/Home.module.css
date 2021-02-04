@@ -16,7 +16,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 40px 5px;
-  margin-top: 250px;
+  margin-top: 200px;
 }
 
 .home .projects a {
@@ -32,7 +32,7 @@
 }
 
 .home .info {
-  margin-top: 250px;
+  margin-top: 200px;
 }
 
 .home .info .main {
