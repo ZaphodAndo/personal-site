@@ -1,4 +1,3 @@
-import React from "react";
 import { BlueBlob } from "../Blobs/Blobs";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import styles from "./Bio.module.css";

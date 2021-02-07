@@ -1,5 +1,3 @@
-import React from "react";
-
 function GithubIcon({ fill }) {
   return (
     <svg

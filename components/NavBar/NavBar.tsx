@@ -1,4 +1,3 @@
-import React from "react";
 import { useRouter } from "next/router";
 import styles from "./NavBar.module.css";
 
@@ -13,7 +12,7 @@ function NavBar() {
   };
 
   const postsClick = () => {
-    router.push("/posts");
+    router.push("/timeline");
   };
 
   return (
@@ -21,8 +20,8 @@ function NavBar() {
       <a onClick={homeClick} style={router.pathname === "/" ? style : null}>
         Home
       </a>
-      <a onClick={postsClick} style={router.pathname === "/posts" ? style : null}>
-        Posts
+      <a onClick={postsClick} style={router.pathname === "/timeline" ? style : null}>
+        Timeline
       </a>
     </nav>
   );

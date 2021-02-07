@@ -1,4 +1,3 @@
-import React from "react";
 import SocialLinks from "../SocialLinks/SocialLinks";
 import styles from "./Footer.module.css";
 

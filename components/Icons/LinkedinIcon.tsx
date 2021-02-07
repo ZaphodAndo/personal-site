@@ -1,5 +1,3 @@
-import React from "react";
-
 function LinkedinIcon({ fill }) {
   return (
     <svg
