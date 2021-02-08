@@ -1,20 +1,20 @@
-function LinkedinIcon({ fill }) {
+function PostIcon() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       width="20"
       height="20"
       fill="none"
-      stroke={fill}
+      stroke="#E0E0E0"
       strokeLinecap="round"
       strokeLinejoin="round"
       strokeWidth="2"
+      className="feather feather-edit-2"
       viewBox="0 0 24 24"
     >
-      <path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"></path>
-      <circle cx="4" cy="4" r="2"></circle>
+      <path d="M17 3a2.828 2.828 0 114 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path>
     </svg>
   );
 }
 
-export default LinkedinIcon;
+export default PostIcon;

@@ -1,4 +1,3 @@
-import React from "react";
 import RightArrowIcon from "../Icons/RightArrowIcon";
 import styles from "./ProjectCard.module.css";
 
