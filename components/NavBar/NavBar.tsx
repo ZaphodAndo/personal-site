@@ -17,10 +17,15 @@ function NavBar() {
 
   return (
     <nav className={styles.nav}>
-      <a onClick={homeClick} style={router.pathname === "/" ? style : null}>
+      <a onClick={homeClick} onKeyDown={homeClick} style={router.pathname === "/" ? style : null} tabIndex={0}>
         Home
       </a>
-      <a onClick={postsClick} style={router.pathname === "/timeline" ? style : null}>
+      <a
+        onClick={postsClick}
+        onKeyDown={postsClick}
+        style={router.pathname === "/timeline" ? style : null}
+        tabIndex={0}
+      >
         Timeline
       </a>
     </nav>
