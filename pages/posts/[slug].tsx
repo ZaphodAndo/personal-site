@@ -2,9 +2,9 @@ import fs from "fs";
 import matter from "gray-matter";
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
-import Link from "next/link";
 import path from "path";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
+import styles from "../../styles/Post.module.css";
 
 // Custom components/renderers to pass to MDX.
 // Since the MDX files aren't loaded by webpack, they have no knowledge of how
@@ -17,17 +17,10 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
-    <div>
-      <header>
-        <nav>
-          <Link href="/">
-            <a>👈 Go back home</a>
-          </Link>
-        </nav>
-      </header>
-      <div className="post-header">
+    <div className={styles.post}>
+      <div className={styles.info}>
         <h1>{frontMatter.title}</h1>
-        {frontMatter.description && <p className="description">{frontMatter.description}</p>}
+        <p>{frontMatter.description}</p>
       </div>
       <main>{content}</main>
     </div>
