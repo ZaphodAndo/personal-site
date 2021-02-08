@@ -31,3 +31,17 @@
   background-color: var(--fg-colour);
   flex: 1 1 0%;
 }
+
+@media only screen and (max-width: 960px) {
+  .desc {
+    margin: 4rem 0 2rem 0;
+  }
+
+  .section {
+    margin-top: 2rem;
+  }
+
+  .section .header {
+    margin-bottom: 2rem;
+  }
+}
