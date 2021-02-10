@@ -53,8 +53,7 @@
   position: relative;
   z-index: 1;
   display: flex;
-  flex-wrap: wrap;
-  gap: 40px 5px;
+  flex-direction: column;
   margin-top: 200px;
 }
 

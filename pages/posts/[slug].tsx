@@ -3,6 +3,7 @@ import matter from "gray-matter";
 import hydrate from "next-mdx-remote/hydrate";
 import renderToString from "next-mdx-remote/render-to-string";
 import path from "path";
+import Head from "next/head";
 import { postFilePaths, POSTS_PATH } from "../../utils/mdxUtils";
 import styles from "../../styles/Post.module.css";
 
@@ -17,13 +18,19 @@ const components = {
 export default function PostPage({ source, frontMatter }) {
   const content = hydrate(source, { components });
   return (
-    <div className={styles.post}>
-      <div className={styles.info}>
-        <h1>{frontMatter.title}</h1>
-        <p>{frontMatter.description}</p>
+    <>
+      <Head>
+        <title>{frontMatter.title}</title>
+        <meta name="description" content={frontMatter.description} />
+      </Head>
+      <div className={styles.post}>
+        <div className={styles.info}>
+          <h1>{frontMatter.title}</h1>
+          <p>{frontMatter.description}</p>
+        </div>
+        <main>{content}</main>
       </div>
-      <main>{content}</main>
-    </div>
+    </>
   );
 }
 

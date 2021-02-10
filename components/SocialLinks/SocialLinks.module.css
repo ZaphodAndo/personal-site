@@ -1,5 +1,11 @@
 .icons {
   display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
+}
+
+.icons a {
+  margin-right: 20px;
+}
+
+.icons a:last-of-type {
+  margin-right: unset;
 }
