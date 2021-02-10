@@ -70,6 +70,10 @@
   margin-left: 5px;
 }
 
+.home .projects a:hover {
+  color: #56ccf2;
+}
+
 .home .info {
   position: relative;
   z-index: 1;

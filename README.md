@@ -8,10 +8,8 @@ This is the latest iteration of my personal site built with [Next.js](https://ne
 - Home
 
   - Contrast on Pebblepad
-  - View code animations
 
 - Timeline
 
-  - Animations for posts
-  - Accessability for posts
+  - Accessability for posts and nav
   - Implement ability to add different types of posts

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import { motion } from "framer-motion";
 import { GreenBlob, LightBlueBlob, LightPurpleBlob, PurpleBlob, YellowBlob } from "../components/Blobs/Blobs";
 import Bio from "../components/Bio/Bio";
 import RightArrowIcon from "../components/Icons/RightArrowIcon";
@@ -45,9 +46,16 @@ function Home() {
             desc="A package that generates randomised sentences by providing datasets of values and specifying which parts of a sentence you wish to randomise."
             link="https://github.com/ZaphodAndo/scribejs"
           />
-          <a href="https://github.com/ZaphodAndo?tab=repositories" target="_blank" rel="noopener noreferrer">
+          <motion.a
+            href="https://github.com/ZaphodAndo?tab=repositories"
+            target="_blank"
+            rel="noopener noreferrer"
+            initial="idle"
+            whileHover="hover"
+            whileFocus="hover"
+          >
             View More <RightArrowIcon className={styles.icon} />
-          </a>
+          </motion.a>
         </div>
         <div className={styles.info}>
           <div className={styles.main}>
