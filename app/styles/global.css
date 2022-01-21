@@ -57,6 +57,7 @@ a {
 
 a:hover,
 a:focus {
+  animation: button-animation 0.2s;
   color: var(--accent-colour);
 }
 
@@ -70,4 +71,28 @@ p {
   font-size: 16px;
   line-height: 30px;
   margin: 0;
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes button-animation {
+  from {
+    color: var(--header-colour);
+  }
+  to {
+    color: var(--accent-colour);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

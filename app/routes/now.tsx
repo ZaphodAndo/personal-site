@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
 
 export default function Thoughts() {
   return (
-    <div className="now-page">
+    <div className="now-page fade-in">
       <HeaderBar title="What im doing now" />
       <ul>
         <li>

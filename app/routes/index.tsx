@@ -18,7 +18,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div>
+    <div className="fade-in">
       <HeaderBar
         title="A frontend developer with an interest in design, specialising in web
         technology"

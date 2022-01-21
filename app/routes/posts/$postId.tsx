@@ -43,7 +43,7 @@ export const loader: LoaderFunction = async ({ params }) => {
 export default function PostRoute() {
   const data = useLoaderData<LoaderData>();
   return (
-    <div className="post-page">
+    <div className="post-page fade-in">
       <HeaderBar title={data.post.title} />
       <div dangerouslySetInnerHTML={{ __html: data.post.content }} />
     </div>

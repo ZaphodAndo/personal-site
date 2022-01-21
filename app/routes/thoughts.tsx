@@ -47,7 +47,7 @@ export const loader: LoaderFunction = async () => {
 export default function Thoughts() {
   const data = useLoaderData<LoaderData>();
   return (
-    <div>
+    <div className="fade-in">
       <HeaderBar title="My random thoughts and ideas on tech and other things." />
       {data.postListItems.map((post) => (
         <div key={post.id} className="post">
