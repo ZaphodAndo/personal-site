@@ -1,4 +1,4 @@
-import type { LinksFunction } from "remix";
+import type { LinksFunction, MetaFunction } from "remix";
 import HeaderBar from "~/components/HeaderBar";
 
 import indexStylesUrl from "../styles/index.css";
@@ -10,6 +10,10 @@ export const links: LinksFunction = () => {
       href: indexStylesUrl,
     },
   ];
+};
+
+export const meta: MetaFunction = () => {
+  return { title: "Ethan Anderson - Home" };
 };
 
 export default function Index() {

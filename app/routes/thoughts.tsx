@@ -1,4 +1,10 @@
-import { Link, LinksFunction, LoaderFunction, useLoaderData } from "remix";
+import {
+  Link,
+  LinksFunction,
+  LoaderFunction,
+  MetaFunction,
+  useLoaderData,
+} from "remix";
 import HeaderBar from "~/components/HeaderBar";
 import { db } from "~/utils/db.server";
 
@@ -22,6 +28,10 @@ export const links: LinksFunction = () => {
       href: thoughtsStylesUrl,
     },
   ];
+};
+
+export const meta: MetaFunction = () => {
+  return { title: "Ethan Anderson - Thoughts" };
 };
 
 export const loader: LoaderFunction = async () => {

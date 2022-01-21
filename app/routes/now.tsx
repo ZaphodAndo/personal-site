@@ -1,4 +1,4 @@
-import type { LinksFunction } from "remix";
+import type { LinksFunction, MetaFunction } from "remix";
 import HeaderBar from "~/components/HeaderBar";
 
 import nowStylesUrl from "../styles/now.css";
@@ -10,6 +10,10 @@ export const links: LinksFunction = () => {
       href: nowStylesUrl,
     },
   ];
+};
+
+export const meta: MetaFunction = () => {
+  return { title: "Ethan Anderson - Now" };
 };
 
 export default function Thoughts() {
