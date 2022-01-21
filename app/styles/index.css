@@ -1,0 +1,21 @@
+.project-list {
+  margin-top: 100px;
+}
+
+.project-list p {
+  margin-top: 10px;
+}
+
+h2 {
+  font-size: 20px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+a {
+  text-decoration-color: var(--border-colour);
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+}

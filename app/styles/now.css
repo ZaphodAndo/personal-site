@@ -1,0 +1,21 @@
+.now-page {
+  margin-top: 191px;
+}
+
+ul {
+  margin: 0 0 100px 0;
+  padding-left: 20px;
+}
+
+li {
+  line-height: 30px;
+}
+
+li a {
+  text-decoration: none;
+}
+
+p {
+  font-size: 12px;
+  font-style: italic;
+}
