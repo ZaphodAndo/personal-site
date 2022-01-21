@@ -1,0 +1,27 @@
+.header-bar {
+  margin-top: 150px;
+  margin-bottom: 100px;
+}
+
+hr {
+  margin: 20px 0;
+  max-width: 175px;
+}
+
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.links a {
+  font-size: 12px;
+  line-height: 30px;
+}
+
+@media only screen and (max-width: 700px) {
+  .header-bar {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+}

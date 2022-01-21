@@ -1,0 +1,104 @@
+@font-face {
+  font-family: "Inter";
+  src: local("Inter") url("/fonts/Inter-VariableFont_slnt\,wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Lora";
+  src: url("/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+}
+
+:root {
+  color-scheme: dark;
+
+  /* Fonts */
+  --main-font: "Inter", "Segoe UI", -apple-system, BlinkMacSystemFont,
+    "Fira Sans", "Helvetica Neue", sans-serif;
+  --secondary-font: "Lora", serif;
+
+  /* Colours */
+  --bg-colour: hsla(0, 0%, 9%, 1);
+  --text-colour: hsla(0, 0%, 63%, 1);
+  --header-colour: hsla(0, 0%, 93%, 1);
+  --border-colour: hsla(0, 0%, 20%, 1);
+  --accent-colour: hsla(198, 82%, 49%, 1);
+}
+
+::selection {
+  color: hsla(0, 0%, 0%, 1);
+  background: var(--accent-colour);
+}
+
+body {
+  background-color: var(--bg-colour);
+  font-family: var(--main-font);
+  color: var(--text-colour);
+  margin: auto;
+  max-width: 700px;
+}
+
+h1 {
+  font-family: var(--secondary-font);
+  color: var(--header-colour);
+  font-weight: 400;
+}
+
+h2 {
+  font-family: var(--secondary-font);
+  color: var(--header-colour);
+  font-weight: 500;
+}
+
+a {
+  color: var(--header-colour);
+  text-decoration: none;
+}
+
+a:hover,
+a:focus {
+  animation: button-animation 0.2s;
+  color: var(--accent-colour);
+}
+
+hr {
+  border: none;
+  background-color: var(--border-colour);
+  height: 1px;
+}
+
+p {
+  font-size: 16px;
+  line-height: 30px;
+  margin: 0;
+}
+
+.fade-in {
+  animation: fade-in 0.3s ease-in;
+}
+
+@keyframes button-animation {
+  from {
+    color: var(--header-colour);
+  }
+  to {
+    color: var(--accent-colour);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(1vh);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    margin: 0 20px;
+  }
+}
