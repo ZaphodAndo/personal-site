@@ -20,3 +20,9 @@ ul {
 li p {
   margin: 0;
 }
+
+@media only screen and (max-width: 700px) {
+  .post-page {
+    margin-top: 50px;
+  }
+}

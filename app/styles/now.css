@@ -15,3 +15,13 @@ p {
   font-size: 12px;
   font-style: italic;
 }
+
+@media only screen and (max-width: 700px) {
+  .now-page {
+    margin-top: 50px;
+  }
+
+  ul {
+    margin-bottom: 50px;
+  }
+}
