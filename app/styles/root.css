@@ -17,7 +17,4 @@ hr {
 .links a {
   font-size: 12px;
   line-height: 30px;
-  text-decoration-color: var(--border-colour);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
 }

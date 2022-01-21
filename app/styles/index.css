@@ -13,9 +13,3 @@ h2 {
 p {
   margin-bottom: 20px;
 }
-
-a {
-  text-decoration-color: var(--border-colour);
-  text-decoration-thickness: 1px;
-  text-underline-offset: 2px;
-}
