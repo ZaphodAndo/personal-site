@@ -1,11 +1,4 @@
-import {
-  Links,
-  LiveReload,
-  Meta,
-  Outlet,
-  Scripts,
-  ScrollRestoration,
-} from "remix";
+import { Links, LiveReload, Meta, Outlet, Scripts, ScrollRestoration } from "remix";
 import type { MetaFunction, LinksFunction } from "remix";
 
 import globalStylesUrl from "./styles/global.css";
@@ -15,20 +8,19 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: "stylesheet",
-      href: globalStylesUrl,
+      href: globalStylesUrl
     },
     {
       rel: "stylesheet",
-      href: rootStylesUrl,
-    },
+      href: rootStylesUrl
+    }
   ];
 };
 
 export const meta: MetaFunction = () => {
   return {
     title: "Ethan Anderson",
-    description:
-      "Ethan is an apprentice applications developer at a company called PebblePad.",
+    description: "Ethan is an apprentice applications developer at a company called PebblePad."
   };
 };
 
