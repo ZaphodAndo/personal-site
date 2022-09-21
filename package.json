@@ -6,7 +6,10 @@
   "scripts": {
     "build": "remix build",
     "dev": "remix dev",
-    "postinstall": "remix setup node"
+    "postinstall": "remix setup node",
+    "prettier": "prettier --ignore-path .gitignore \"**/*.+(js|json|ts|tsx|jsx|css|mdx|md)\"",
+    "format": "npm run prettier -- --write",
+    "check-format": "npm run prettier -- --list-different"
   },
   "dependencies": {
     "@prisma/client": "^3.8.1",
@@ -23,6 +26,7 @@
     "@remix-run/dev": "^1.1.3",
     "@types/react": "^17.0.24",
     "@types/react-dom": "^17.0.9",
+    "prettier": "^2.7.1",
     "prisma": "^3.8.1",
     "typescript": "^4.1.2"
   },
