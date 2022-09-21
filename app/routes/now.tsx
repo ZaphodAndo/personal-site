@@ -40,11 +40,10 @@ export default function Thoughts() {
           </a>{" "}
           on LinqEm
         </li>
-        <li>Working towards completing my apprenticship</li>
         <li>Trying to read more books</li>
         <li>Working on various side projects</li>
       </ul>
-      <p>Last updated on the 20th Janurary 2022</p>
+      <p>Last updated on the 21st September 2022</p>
     </div>
   );
 }

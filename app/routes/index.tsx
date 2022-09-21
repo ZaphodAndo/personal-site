@@ -24,9 +24,9 @@ export default function Index() {
         technology"
       />
       <p>
-        Hi I’m Ethan an apprentice applications developer at PebblePad. My preferred area is
-        frontend web development however I am also interested in exploring building UI for mobile
-        and desktop experiences.
+        Hi I’m Ethan an applications developer at PebblePad. My preferred area is frontend web
+        development however I am also interested in exploring building UI for mobile and desktop
+        experiences.
       </p>
       <p>
         When not working I’m either scrolling through twitter or smashing out dev work for LinqEm an
