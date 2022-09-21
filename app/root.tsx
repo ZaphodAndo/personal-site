@@ -20,7 +20,7 @@ export const links: LinksFunction = () => {
 export const meta: MetaFunction = () => {
   return {
     title: "Ethan Anderson",
-    description: "Ethan is an apprentice applications developer at a company called PebblePad."
+    description: "Ethan is an applications developer at a company called PebblePad."
   };
 };
 
