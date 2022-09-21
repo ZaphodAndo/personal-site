@@ -7,8 +7,8 @@ export const links: LinksFunction = () => {
   return [
     {
       rel: "stylesheet",
-      href: indexStylesUrl,
-    },
+      href: indexStylesUrl
+    }
   ];
 };
 
@@ -24,13 +24,13 @@ export default function Index() {
         technology"
       />
       <p>
-        Hi I’m Ethan an apprentice applications developer at PebblePad. My
-        preferred area is frontend web development however I am also interested
-        in exploring building UI for mobile and desktop experiences.
+        Hi I’m Ethan an applications developer at PebblePad. My preferred area is frontend web
+        development however I am also interested in exploring building UI for mobile and desktop
+        experiences.
       </p>
       <p>
-        When not working I’m either scrolling through twitter or smashing out
-        dev work for LinqEm an elegant link aggregation repository for the web.
+        When not working I’m either scrolling through twitter or smashing out dev work for LinqEm an
+        elegant link aggregation repository for the web.
       </p>
       <div className="project-list">
         <h2>Projects</h2>
@@ -39,16 +39,12 @@ export default function Index() {
           LinqEm
         </a>
         <p>An elegant link aggregation repository for the web.</p>
-        <a
-          href="https://github.com/LinqEm/ProjectFanta"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
+        <a href="https://github.com/LinqEm/ProjectFanta" target="_blank" rel="noopener noreferrer">
           Project Fanta
         </a>
         <p>
-          An instant and simple platform for anybody who wants to broadcast
-          messages to subscribers using SMS!
+          An instant and simple platform for anybody who wants to broadcast messages to subscribers
+          using SMS!
         </p>
       </div>
     </div>

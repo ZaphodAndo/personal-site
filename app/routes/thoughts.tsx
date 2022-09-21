@@ -1,32 +1,18 @@
-import {
-  Link,
-  LinksFunction,
-  LoaderFunction,
-  MetaFunction,
-  useLoaderData,
-} from "remix";
+import { json, Link, LinksFunction, MetaFunction, useLoaderData } from "remix";
 import HeaderBar from "~/components/HeaderBar";
-import { db } from "~/utils/db.server";
 
-import thoughtsStylesUrl from "../styles/thoughts.css";
+import * as postA from "./posts/welcome.mdx";
+import * as postB from "./posts/setting-up-git.mdx";
+import * as postC from "./posts/great-arm-migration.mdx";
 
-type Post = {
-  id: number;
-  createdAt: Date;
-  description: string;
-  title: string;
-};
-
-type LoaderData = {
-  postListItems: Array<Post>;
-};
+import styles from "../styles/thoughts.css";
 
 export const links: LinksFunction = () => {
   return [
     {
       rel: "stylesheet",
-      href: thoughtsStylesUrl,
-    },
+      href: styles
+    }
   ];
 };
 
@@ -34,28 +20,28 @@ export const meta: MetaFunction = () => {
   return { title: "Ethan Anderson - Thoughts" };
 };
 
-export const loader: LoaderFunction = async () => {
-  const data: LoaderData = {
-    postListItems: await db.post.findMany({
-      select: { id: true, title: true, description: true, createdAt: true },
-      orderBy: { createdAt: "desc" },
-    }),
+function postFromModule(mod: any) {
+  return {
+    slug: mod.filename.replace(/\.mdx?$/, ""),
+    ...mod.attributes.meta
   };
-  return data;
-};
+}
+
+export async function loader() {
+  return json([postFromModule(postC), postFromModule(postB), postFromModule(postA)]);
+}
 
 export default function Thoughts() {
-  const data = useLoaderData<LoaderData>();
+  const data = useLoaderData();
   return (
     <div className="fade-in">
       <HeaderBar title="My random thoughts and ideas on tech and other things." />
-      {data.postListItems.map((post) => (
-        <div key={post.id} className="post">
-          <Link to={`/posts/${post.id}`}>{post.title}</Link>
+      {data.map((post: any) => (
+        <div key={post.slug} className="post">
+          <Link to={`/posts/${post.slug}`}>{post.title}</Link>
           <p>{post.description}</p>
         </div>
       ))}
-      <Link to="/"></Link>
     </div>
   );
 }
