@@ -1,0 +1,14 @@
+---
+layout: layouts/home.njk
+eleventyNavigation:
+  key: Archive
+  order: 2
+---
+
+{%- css %}{% include "public/css/blog.css" %}{% endcss %}
+
+<div class="blog-content">
+	<h1>Archive</h1>
+
+	{% set postslist = collections.posts %} {% include "postslist.njk" %}
+</div>

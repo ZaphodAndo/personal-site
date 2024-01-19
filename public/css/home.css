@@ -1,0 +1,23 @@
+main {
+	display: flex;
+	justify-content: center;
+	margin: 8vw;
+}
+
+.posts {
+	max-width: 900px;
+	width: 100%;
+}
+
+.postlist-title {
+	font-family: var(--secondary-font-family);
+	font-weight: 700;
+	font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
+	margin: 0;
+}
+
+.posts-head {
+	display: flex;
+	align-items: center;
+	margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
+}
