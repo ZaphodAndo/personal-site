@@ -1,0 +1,44 @@
+main {
+	display: flex;
+	justify-content: center;
+	margin: 8vw;
+}
+
+.blog-content {
+	width: 100%;
+	max-width: 900px;
+}
+
+h2,
+h3 {
+	font-family: var(--secondary-font-family);
+	font-style: normal;
+	font-weight: 700;
+	margin: unset;
+	margin-top: clamp(2rem, 1.3497rem + 3.7161vw, 3.44rem);
+	margin-bottom: clamp(1rem, 0.6071rem + 2.2452vw, 1.87rem);
+}
+
+h2 {
+	font-size: clamp(1.875rem, 1.4234rem + 2.5806vw, 2.875rem);
+}
+
+h3 {
+	font-size: clamp(1.25rem, 0.7984rem + 2.5806vw, 2.25rem);
+}
+
+.blog-content p {
+	font-size: clamp(1rem, 0.8194rem + 1.0323vw, 1.4rem);
+	font-weight: 400;
+	line-height: clamp(2rem, 1.6331rem + 2.0968vw, 2.8125rem);
+}
+
+.post-meta-wrapper {
+	display: flex;
+	justify-content: center;
+	margin: 8vw;
+}
+.post-meta {
+	width: 100%;
+	max-width: 900px;
+}

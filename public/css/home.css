@@ -1,3 +1,22 @@
+.header-content p {
+	font-weight: 400;
+	font-size: clamp(1rem, 0.3226rem + 3.871vw, 2.5rem);
+	margin: unset;
+	text-wrap: balance;
+}
+.home-link {
+	font-family: var(--secondary-font-family);
+	font-size: clamp(2.5rem, 0.8065rem + 9.6774vw, 6.25rem);
+	font-weight: 700;
+	text-decoration: unset;
+	margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
+}
+.home-link[href]:hover,
+.home-link[href]:focus {
+	text-decoration: underline;
+	color: var(--text-colour);
+}
+
 main {
 	display: flex;
 	justify-content: center;

@@ -1,14 +1,22 @@
 ---
-layout: layouts/home.njk
+layout: layouts/archive.njk
 eleventyNavigation:
   key: Archive
   order: 2
 ---
 
-{%- css %}{% include "public/css/blog.css" %}{% endcss %}
+{%- css %}{% include "public/css/blog.css" %}{% endcss %} {%- css %}{% include
+"public/css/header.css" %}{% endcss %}
 
 <div class="blog-content">
-	<h1>Archive</h1>
-
-	{% set postslist = collections.posts %} {% include "postslist.njk" %}
+	{% for year, yearPosts in collections.postsByYear %}
+	<h2>{{ year }}</h2>
+	<ol reversed>
+		{% for post in yearPosts %}
+		<li>
+			<a class="fat-hover-link" href="{{ post.url }}">{{ post.data.title }}</a>
+		</li>
+		{% endfor %}
+	</ol>
+	{% endfor %}
 </div>
