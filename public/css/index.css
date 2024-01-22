@@ -282,12 +282,19 @@ footer p {
 
 /* Tags */
 .post-tag {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
 	text-transform: capitalize;
-	font-style: italic;
 	font-weight: 500;
+	border: 2px solid black;
+	padding: 0.5rem 1rem;
+	border-radius: 30px;
+	text-decoration: unset;
+	background-color: var(--colour-purple);
+	transition: background-color 0.2s ease-out;
+}
+.post-tag:hover,
+.post-tag:focus {
+	background-color: var(--colour-black);
+	color: var(--colour-white);
 }
 .postlist-item > .post-tag {
 	align-self: center;
@@ -297,10 +304,11 @@ footer p {
 .post-metadata {
 	display: inline-flex;
 	flex-wrap: wrap;
-	gap: 0.5em;
+	gap: 1.2em;
 	list-style: none;
 	padding: 0;
 	margin: 0;
+	margin-bottom: 2rem;
 }
 .post-metadata time {
 	margin-right: 1em;

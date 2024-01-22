@@ -19,6 +19,17 @@ include "public/css/header.css" %}{% endcss %} {%- css %}{% include
 
 <main id="skip">
 	<div class="blog-content">
+		<ul class="post-metadata">
+			{%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{
+				tag | slugify
+			}}/{% endset %}
+			<li>
+				<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a
+				>{%- if not loop.last %} {% endif %}
+			</li>
+			{%- endfor %}
+		</ul>
+
 		{{ content | safe }}
 	</div>
 </main>
@@ -35,17 +46,6 @@ include "public/css/header.css" %}{% endcss %} {%- css %}{% include
 			<a class="fat-hover-link" href="{{ nextPost.url }}">Next post</a>
 			{% endif %}
 		</div>
-
-		<ul class="post-metadata">
-			{%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{
-				tag | slugify
-			}}/{% endset %}
-			<li>
-				<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a
-				>{%- if not loop.last %}, {% endif %}
-			</li>
-			{%- endfor %}
-		</ul>
 		{%- endif %} {%- endif %}
 	</div>
 </div>
