@@ -1,28 +1,35 @@
 ---
 title: This is my first post.
-description: This is a post on My Blog about agile frameworks.
-date: 2018-05-01
+description: This is my very first post on my brand new blog.
+date: 2024-01-22
 tags:
-  - another tag
   - post
+  - meta
 ---
 
-Leverage agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.
+## In the beginning
 
-Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution. User generated content in real-time will have multiple touchpoints for offshoring.
+I have had this site and domain for at least 5 years now and in that time its been redesigned at least six or severn times and rebuilt in every sort of javascript and frontend framework available to humankind.
 
-## Section Header
+Despite this I have never really posted much, instead its been left to gather dust and serve as more of a project that I can tinker with and try out different frameworks and technologies that I was interested in at the time.
 
-Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps. Nanotechnology immersion along the information highway will close the loop on focusing solely on the bottom line.
+A part of that is never getting into the routine of documenting my rants and thoughts into posts for unfortunate souls on the internet to see but another reason for that was just that often there was too much friction with doing it due too how my site had been built.
 
-```diff-js
- // this is a command
- function myCommand() {
-+  let counter = 0;
--  let counter = 1;
-   counter++;
+Hopefully this newly redesigned and rebuilt version using the static site generator 11ty will provide me with the simple base I need to just ship posts when I feel like it without getting bogged down in x javascript framework of the month everyone is losing their minds over.
+
+Or I will post a handful of times and it will gather dust for another 5 years who knows. 😆
+
+### Side note
+
+One cool thing about this new site is that I finally have nice syntax highlighting for code blocks including diffs. 🥳
+
+```diff-ts
+ // This is a comment
+ function add(a: number, b: number): number {
++  return value = a + b;
+-  value = a + b;
  }
 
  // Test with a line break above this line.
- console.log('Test');
+ console.log("Test");
 ```

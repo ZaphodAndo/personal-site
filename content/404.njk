@@ -1,0 +1,18 @@
+---
+layout: layouts/home.njk
+permalink: 404.html
+eleventyExcludeFromCollections: true
+eleventyComputed:
+  title: Ethan Anderson - 404
+---
+
+{%- css %}{% include "public/css/404.css" %}{% endcss %}
+
+<main>
+	<img src="/img/crab404.png" />
+	<h1>404 Page not found</h1>
+	<p>
+		Try the <a class="fat-hover-link" href="/">homepage</a> or
+		<a class="fat-hover-link" href="/blog">blog</a> instead
+	</p>
+</main>
