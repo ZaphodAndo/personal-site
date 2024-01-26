@@ -22,7 +22,7 @@
 }
 
 /* Theme colors */
-html[data-theme="light"] {
+:root {
 	--colour-black: hsla(0, 0%, 0%, 1);
 	--colour-yellow: hsla(61, 76%, 72%, 1);
 	--colour-blue: hsla(165, 56%, 71%, 1);
@@ -52,45 +52,6 @@ html[data-theme="light"] {
 	--postlist-item-background-four-colour: var(--colour-black);
 
 	color-scheme: light;
-}
-
-html[data-theme="dark"] {
-	--colour-black: hsla(120, 6%, 10%, 1);
-	--colour-black-darker: hsla(100, 6%, 9%, 1);
-	--colour-yellow: hsla(61, 76%, 72%, 1);
-	--colour-blue: hsla(165, 56%, 29%, 1);
-	--colour-blue-darker: hsla(165, 56%, 12%, 1);
-	--colour-purple: hsla(300, 60%, 33%, 1);
-	--colour-purple-darker: hsla(300, 59%, 13%, 1);
-	--colour-green: hsla(93, 48%, 32%, 1);
-	--colour-green-darker: hsla(93, 48%, 13%, 1);
-	--colour-red: hsla(0, 96%, 31%, 1);
-	--colour-red-darker: hsla(0, 97%, 12%, 1);
-	--colour-white-lighter: hsla(0, 0%, 100%, 1);
-	--colour-white: hsla(60, 51%, 91%, 1);
-	--colour-white-darker: hsla(105, 5%, 69%, 1);
-	--colour-orange: hsl(17, 89%, 24%);
-
-	--background-colour: var(--colour-black);
-	--header-colour: var(--colour-black-darker);
-	--border-colour: var(--colour-white);
-
-	--text-colour: var(--colour-white-lighter);
-	--subtle-text-colour: var(--colour-white-darker);
-	--text-colour-link: var(--colour-white-lighter);
-	--text-colour-header: var(--colour-white);
-
-	--hover-link-background-colour: var(--colour-yellow);
-	--hover-link-text-colour: var(--colour-black);
-
-	--icon-fill-colour: var(--colour-black);
-
-	--postlist-item-background-one-colour: var(--colour-green-darker);
-	--postlist-item-background-two-colour: var(--colour-purple-darker);
-	--postlist-item-background-three-colour: var(--colour-blue-darker);
-	--postlist-item-background-four-colour: var(--colour-red-darker);
-
-	color-scheme: dark;
 }
 
 /* Global stylesheet */
