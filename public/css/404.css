@@ -12,6 +12,7 @@ main h1 {
 	font-family: var(--secondary-font-family);
 	font-weight: 700;
 	font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
+	color: var(--text-colour-header);
 }
 
 main p {

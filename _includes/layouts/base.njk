@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ metadata.language }}">
+<html lang="{{ metadata.language }}" data-theme="light">
 	<head>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -67,12 +67,9 @@
 		{{ content | safe }}
 
 		<footer>
-			<div class="footer-top">
-				<p>Made by Ethan Anderson</p>
+			<div class="footer-links">
 				<a class="fat-hover-link" href="/blog">Archive</a>
 				<a class="fat-hover-link" href="/feed/feed.xml">RSS</a>
-			</div>
-			<div class="footer-bottom">
 				<a
 					class="fat-hover-link"
 					href="https://mastodonapp.uk/@ZaphodAndo"
@@ -88,6 +85,19 @@
 					>Github</a
 				>
 			</div>
+
+			<select
+				class="switcher"
+				name="theme"
+				id="theme-switcher"
+				onchange="switchTheme(this)"
+			>
+				<option value="system">System Default</option>
+				<option value="light">Light</option>
+				<option value="dark">Dark</option>
+			</select>
 		</footer>
+
+		<script src="/bundle.js"></script>
 	</body>
 </html>

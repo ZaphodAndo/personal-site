@@ -12,6 +12,7 @@
 
 /* Defaults */
 :root {
+	--syntax-tab-size: 2;
 	--font-family: "Gorton";
 	--secondary-font-family: "Lora";
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
@@ -21,7 +22,7 @@
 }
 
 /* Theme colors */
-:root {
+html[data-theme="light"] {
 	--colour-black: hsla(0, 0%, 0%, 1);
 	--colour-yellow: hsla(61, 76%, 72%, 1);
 	--colour-blue: hsla(165, 56%, 71%, 1);
@@ -32,22 +33,65 @@
 	--colour-orange: hsla(17, 89%, 60%, 1);
 
 	--background-colour: var(--colour-white);
+	--header-colour: var(--colour-yellow);
+	--border-colour: var(--colour-black);
 
 	--text-colour: var(--colour-black);
+	--subtle-text-colour: var(--colour-black);
 	--text-colour-link: var(--colour-black);
+	--text-colour-header: var(--colour-black);
 
-	--syntax-tab-size: 2;
+	--hover-link-background-colour: var(--colour-black);
+	--hover-link-text-colour: var(--colour-yellow);
+
+	--icon-fill-colour: var(--colour-black);
+
+	--postlist-item-background-one-colour: var(--colour-black);
+	--postlist-item-background-two-colour: var(--colour-black);
+	--postlist-item-background-three-colour: var(--colour-black);
+	--postlist-item-background-four-colour: var(--colour-black);
+
+	color-scheme: light;
 }
 
-/* @media (prefers-color-scheme: dark) {
-	:root {
-		--text-colour-link: #1493fb;
-		--text-colour-link-active: #6969f7;
-		--text-colour-link-visited: #a6a6f8;
+html[data-theme="dark"] {
+	--colour-black: hsla(120, 6%, 10%, 1);
+	--colour-black-darker: hsla(100, 6%, 9%, 1);
+	--colour-yellow: hsla(61, 76%, 72%, 1);
+	--colour-blue: hsla(165, 56%, 29%, 1);
+	--colour-blue-darker: hsla(165, 56%, 12%, 1);
+	--colour-purple: hsla(300, 60%, 33%, 1);
+	--colour-purple-darker: hsla(300, 59%, 13%, 1);
+	--colour-green: hsla(93, 48%, 32%, 1);
+	--colour-green-darker: hsla(93, 48%, 13%, 1);
+	--colour-red: hsla(0, 96%, 31%, 1);
+	--colour-red-darker: hsla(0, 97%, 12%, 1);
+	--colour-white-lighter: hsla(0, 0%, 100%, 1);
+	--colour-white: hsla(60, 51%, 91%, 1);
+	--colour-white-darker: hsla(105, 5%, 69%, 1);
+	--colour-orange: hsl(17, 89%, 24%);
 
-		--background-colour: #15202b;
-	}
-} */
+	--background-colour: var(--colour-black);
+	--header-colour: var(--colour-black-darker);
+	--border-colour: var(--colour-white);
+
+	--text-colour: var(--colour-white-lighter);
+	--subtle-text-colour: var(--colour-white-darker);
+	--text-colour-link: var(--colour-white-lighter);
+	--text-colour-header: var(--colour-white);
+
+	--hover-link-background-colour: var(--colour-yellow);
+	--hover-link-text-colour: var(--colour-black);
+
+	--icon-fill-colour: var(--colour-black);
+
+	--postlist-item-background-one-colour: var(--colour-green-darker);
+	--postlist-item-background-two-colour: var(--colour-purple-darker);
+	--postlist-item-background-three-colour: var(--colour-blue-darker);
+	--postlist-item-background-four-colour: var(--colour-red-darker);
+
+	color-scheme: dark;
+}
 
 /* Global stylesheet */
 * {
@@ -90,12 +134,12 @@ a {
 }
 
 .fat-hover-link[href] {
-	color: var(--text-colour-link);
+	color: var(--text-colour-header);
 	text-decoration: unset;
 	background-image: linear-gradient(
 		120deg,
-		var(--colour-black),
-		var(--colour-black)
+		var(--hover-link-background-colour),
+		var(--hover-link-background-colour)
 	);
 	background-size: 100% 0.05em;
 	background-position: 0 90%;
@@ -106,7 +150,7 @@ a {
 .fat-hover-link[href]:active,
 .fat-hover-link[href]:focus {
 	background-size: 100% 100%;
-	color: var(--colour-yellow);
+	color: var(--hover-link-text-colour);
 	text-decoration: unset;
 }
 
@@ -119,7 +163,7 @@ header:after {
 .links-nextprev {
 	display: flex;
 	list-style: none;
-	border-top: 2px solid var(--colour-black);
+	border-top: 2px solid var(--border-colour);
 	padding: 1em 0;
 }
 .links-nextprev a {
@@ -164,7 +208,7 @@ code {
 header {
 	display: flex;
 	justify-content: center;
-	background-color: var(--colour-yellow);
+	background-color: var(--header-colour);
 }
 .header-content {
 	display: flex;
@@ -193,6 +237,7 @@ nav {
 .nav-item:last-of-type {
 	margin-top: -2px;
 	background-color: var(--colour-purple);
+	color: var(--icon-fill-colour);
 	fill: none;
 }
 .nav-item[href]:hover,
@@ -206,29 +251,35 @@ nav {
 
 /* Footer */
 footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
 	font-size: clamp(0.875rem, 0.8185rem + 0.3226vw, 1rem);
 	font-weight: 500;
 	margin: 10vw auto 6vw auto;
 	max-width: 900px;
-	text-align: center;
-}
-footer .footer-top {
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	gap: 1.25rem;
-	margin-bottom: 0.62rem;
-}
-footer .footer-bottom {
-	display: flex;
-	justify-content: center;
-	gap: 1.25rem;
 }
 footer p {
 	font-size: clamp(0.875rem, 0.8185rem + 0.3226vw, 1rem);
 	font-weight: 500;
 	margin: 0;
 	line-height: 1.5;
+	color: var(--subtle-text-colour);
+}
+footer .footer-links {
+	display: flex;
+	gap: 1.25rem;
+}
+footer .switcher {
+	border: unset;
+	border-bottom: 1px solid var(--border-colour);
+	background-color: var(--background-colour);
+	font-family: "gorton";
+	font-size: clamp(0.875rem, 0.8185rem + 0.3226vw, 1rem);
+	font-weight: 500;
+	color: var(--subtle-text-colour);
+	margin-top: 1.25rem;
 }
 
 /* Posts list */
@@ -245,25 +296,47 @@ footer p {
 	padding: clamp(1.25rem, 0.6855rem + 3.2258vw, 2.5rem);
 	border: 2px solid var(--colour-black);
 	text-decoration: unset;
-	box-shadow: 10px 10px 0px 0px var(--colour-black);
 	transition: box-shadow 0.1s ease-out;
 }
 .postlist-item:hover,
 .postlist-item:focus {
-	box-shadow: none;
 	text-decoration: none;
 }
 .postlist-item:nth-child(4n-7) {
 	background-color: var(--colour-green);
+	box-shadow: 10px 10px 0px 0px var(--postlist-item-background-one-colour);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
 }
 .postlist-item:nth-child(4n-6) {
 	background-color: var(--colour-purple);
+	box-shadow: 10px 10px 0px 0px var(--postlist-item-background-two-colour);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
 }
 .postlist-item:nth-child(4n-5) {
 	background-color: var(--colour-blue);
+	box-shadow: 10px 10px 0px 0px var(--postlist-item-background-three-colour);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
 }
 .postlist-item:nth-child(4n-4) {
 	background-color: var(--colour-red);
+	box-shadow: 10px 10px 0px 0px var(--postlist-item-background-four-colour);
+
+	&:hover,
+	&:focus {
+		box-shadow: none;
+	}
 }
 .post-title {
 	display: -webkit-box;

@@ -1,5 +1,5 @@
 ---
-title: This is my first post.
+title: This is my first post
 description: This is my very first post on my brand new blog.
 date: 2024-01-22
 tags:

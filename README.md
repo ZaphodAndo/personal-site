@@ -1,9 +1,9 @@
 # Personal site
 
+The latest iteration of my personal site and blog.
+
 ### To do
 
-1. Add posts
-2. Check a11y
-3. Dark theme
-4. Style rss feed
-5. Add webmentions
+1. Improve footer design
+2. Style rss feed
+3. Add webmentions
