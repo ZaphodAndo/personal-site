@@ -1,11 +1,13 @@
 function setSelectOption(theme) {
 	const themeSwitcher = document.getElementById("theme-switcher");
-	if (theme === "dark") {
-		themeSwitcher.selectedIndex = 2;
-	} else if (theme === "light") {
-		themeSwitcher.selectedIndex = 1;
-	} else if (theme === "system") {
-		themeSwitcher.selectedIndex = 0;
+	if (themeSwitcher) {
+		if (theme === "dark") {
+			themeSwitcher.selectedIndex = 2;
+		} else if (theme === "light") {
+			themeSwitcher.selectedIndex = 1;
+		} else if (theme === "system") {
+			themeSwitcher.selectedIndex = 0;
+		}
 	}
 }
 
