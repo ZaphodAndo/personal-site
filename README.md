@@ -1,4 +1,9 @@
-# ethana.dev
+# Personal site
 
-This is the latest iteration of my personal site built with [remix](https://remix.run/) and hosted
-on [vercel](https://vercel.com/).
+The latest iteration of my personal site and blog.
+
+### To do
+
+1. Improve footer design
+2. Style rss feed
+3. Add webmentions

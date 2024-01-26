@@ -1,0 +1,51 @@
+---
+layout: layouts/base.njk
+---
+
+{%- css %}{% include "node_modules/prismjs/themes/prism-okaidia.css" %}{% endcss
+%} {%- css %}{% include "public/css/prism-diff.css" %}{%- endcss %} {%- css %}{%
+include "public/css/header.css" %}{% endcss %} {%- css %}{% include
+"public/css/post.css" %}{% endcss %}
+
+<header>
+	<div class="header-content">
+		<a class="home-link" href="/">Home</a>
+		<h1>{{ title }}</h1>
+		<time datetime="{{ page.date | htmlDateString }}">{{
+			page.date | readableDate
+		}}</time>
+	</div>
+</header>
+
+<main id="skip">
+	<div class="blog-content">
+		<ul class="post-metadata">
+			{%- for tag in tags | filterTagList %} {%- set tagUrl %}/tags/{{
+				tag | slugify
+			}}/{% endset %}
+			<li>
+				<a href="{{ tagUrl }}" class="post-tag">{{ tag }}</a
+				>{%- if not loop.last %} {% endif %}
+			</li>
+			{%- endfor %}
+		</ul>
+
+		{{ content | safe }}
+	</div>
+</main>
+
+<div class="post-meta-wrapper">
+	<div class="post-meta">
+		{%- if collections.posts %} {%- set previousPost = collections.posts |
+		getPreviousCollectionItem %} {%- set nextPost = collections.posts |
+		getNextCollectionItem %} {%- if nextPost or previousPost %}
+		<div class="links-nextprev">
+			{%- if previousPost %}
+			<a class="fat-hover-link" href="{{ previousPost.url }}">Previous post</a>
+			{% endif %} {%- if nextPost %}
+			<a class="fat-hover-link" href="{{ nextPost.url }}">Next post</a>
+			{% endif %}
+		</div>
+		{%- endif %} {%- endif %}
+	</div>
+</div>

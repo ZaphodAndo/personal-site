@@ -1,0 +1,24 @@
+---
+layout: layouts/archive.njk
+eleventyNavigation:
+  key: Archive
+  order: 2
+eleventyComputed:
+  title: Ethan Anderson - Archive
+---
+
+{%- css %}{% include "public/css/blog.css" %}{% endcss %} {%- css %}{% include
+"public/css/header.css" %}{% endcss %}
+
+<div class="blog-content">
+	{% for year, yearPosts in collections.postsByYear %}
+	<h2>{{ year }}</h2>
+	<ol reversed>
+		{% for post in yearPosts %}
+		<li>
+			<a class="fat-hover-link" href="{{ post.url }}">{{ post.data.title }}</a>
+		</li>
+		{% endfor %}
+	</ol>
+	{% endfor %}
+</div>

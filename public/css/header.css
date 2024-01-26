@@ -1,0 +1,25 @@
+.header-content .home-link {
+	color: var(--subtle-text-colour);
+	font-size: clamp(1rem, 0.6048rem + 2.2581vw, 1.875rem);
+	text-decoration: none;
+	font-weight: 500;
+	margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
+}
+.header-content .home-link:hover,
+.header-content .home-link:focus {
+	text-decoration: underline;
+}
+.header-content h1 {
+	color: var(--text-colour-header);
+	font-family: var(--secondary-font-family);
+	font-weight: 700;
+	font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
+	margin: 0;
+}
+.header-content p,
+.header-content time {
+	color: var(--subtle-text-colour);
+	font-size: clamp(1rem, 0.6048rem + 2.2581vw, 1.875rem);
+	font-weight: 500;
+	margin: 1.87rem 0 0 0;
+}

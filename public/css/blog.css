@@ -1,0 +1,32 @@
+main {
+	display: flex;
+	justify-content: center;
+	margin: 8vw;
+}
+
+.blog-content {
+	width: 100%;
+	max-width: 900px;
+}
+
+h2 {
+	color: var(--text-colour-header);
+	font-family: var(--secondary-font-family);
+	font-weight: 700;
+	font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
+	margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
+}
+
+ol {
+	color: var(--subtle-text-colour);
+	margin-bottom: 6vw;
+}
+ol:last-of-type {
+	margin-bottom: 0;
+}
+
+li {
+	font-size: clamp(1rem, 0.6048rem + 2.2581vw, 1.875rem);
+	font-weight: 500;
+	margin-bottom: 1.875rem;
+}

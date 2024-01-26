@@ -1,0 +1,33 @@
+---
+pagination:
+  data: collections
+  size: 1
+  alias: tag
+  filter:
+    - all
+    - post
+    - posts
+    - tagList
+  addAllPagesToCollections: true
+layout: layouts/home.njk
+eleventyComputed:
+  title: Ethan Anderson - Tagged “{{ tag }}”
+permalink: /tags/{{ tag | slugify }}/
+---
+
+{%- css %}{% include "public/css/header.css" %}{% endcss %} {%- css %}{% include
+"public/css/tags.css" %}{% endcss %}
+
+<header>
+	<div class="header-content">
+		<a class="home-link" href="/">Home</a>
+		<h1>Tagged "{{ tag }}"</h1>
+		<p>See <a class="fat-hover-link" href="/tags/">all tags</a>.</p>
+	</div>
+</header>
+
+<main id="skip">
+	<div class="tags-content">
+		{% set postslist = collections[ tag ] %} {% include "postslist.njk" %}
+	</div>
+</main>

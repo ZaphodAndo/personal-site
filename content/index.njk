@@ -1,0 +1,25 @@
+---
+layout: layouts/landing.njk
+numberOfLatestPostsToShow: 4
+eleventyComputed:
+  title: Ethan Anderson - Home
+---
+
+{%- css %}{% include "public/css/home.css" %}{% endcss %}
+
+<div class="posts">
+	{% set postsCount = collections.posts | length %} {% set latestPostsCount =
+	postsCount | min(numberOfLatestPostsToShow) %}
+
+	<div class="posts-head">
+		<h2 class="postlist-title">
+			Latest Post{% if latestPostsCount != 1 %}s{% endif %}
+		</h2>
+		{% include "iconNav.njk" %}
+	</div>
+
+	{% set postslist = collections.posts | head(-1 * numberOfLatestPostsToShow) %}
+	{% set postslistCounter = postsCount %} {% include "postslist.njk" %} {% set
+	morePosts = postsCount - numberOfLatestPostsToShow %} {% if morePosts > 0 %}{%
+	endif %}
+</div>

@@ -1,0 +1,17 @@
+main {
+	display: flex;
+	justify-content: center;
+	margin: 8vw;
+}
+
+.tags-content {
+	width: 100%;
+	max-width: 900px;
+}
+
+.tags-list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 1.2em;
+}
