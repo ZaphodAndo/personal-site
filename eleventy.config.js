@@ -5,6 +5,7 @@ export default function(eleventyConfig) {
     eleventyConfig.setIncludesDirectory("../layouts");
     eleventyConfig.setDataDirectory("../data");
     eleventyConfig.addWatchTarget("./css");
-    eleventyConfig.addPassthroughCopy("public/favicon.ico");
+    eleventyConfig.addPassthroughCopy("public");
+    eleventyConfig.addPassthroughCopy("fonts");
     eleventyConfig.addPlugin(pluginRss);
 };

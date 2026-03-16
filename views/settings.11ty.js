@@ -1,6 +1,6 @@
 export const data = {
     layout: "base.11ty.js",
-    title: "Ethan Anderson - About",
+    title: "Ethan Anderson - Settings",
 };
 
 export function render(data) {

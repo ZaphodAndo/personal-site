@@ -3,6 +3,8 @@ import { inlineCSS } from "../utils/inlineCSS.js";
 
 export const data = {
     sharedCSS: [
+        getFilePath("../css/shared/variables.css"),
+        getFilePath("../css/shared/utilities.css"),
         getFilePath("../css/shared/base.css")
     ],
     pageCSS: []
@@ -33,21 +35,18 @@ export function render(data) {
             <body>
                 <a href="#skip" class="visually-hidden">Skip to main content</a>
                 <nav>
-                    <a href="/">Home</a>
-                    <a href="/about">About</a>
-                    <a href="/blog">Blog</a>
-                    <a href="/notes">Notes</a>
-                    <a href="/bookmarks">Bookmarks</a>
+                    <a href="/">Ethan</a>
+                    <a href="/blog">blog</a>
+                    <a href="/notes">notes</a>
+                    <a href="/bookmarks">bookmarks</a>
+                    <a href="/reading">reading</a>
+                    <a href="/settings">settings</a>
                 </nav>
                 <main id="skip">                            
                     ${data.content}
                 </main>
                 <footer>
-                    <a href="/">©️ 2019 - 2025</a>
-                    <a href="/">Ethan Anderson</a>
-                    <a href="https://social.lol/@zaphod" rel="me">Mastodon</a>
-                    <a href="https://github.com/ZaphodAndo">GitHub</a>
-                    <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/">LinkedIn</a>
+                    <a href="/">© ethan anderson 2026</a>
                 </footer>
             </body>
         </html>
