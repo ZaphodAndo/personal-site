@@ -10,24 +10,23 @@
     font-display: fallback;
 }
 
+@font-face {
+    font-family: "Rubik Glitch";
+    src: url("/fonts/RubikGlitch-Regular.ttf") format("truetype");
+    font-display: fallback;
+}
+
 /* TODO: convert colours to new colour type */
 :root {
-    --primary-background: #fffda2;
-    --secondary-background: #baffb4;
-    --card-surface: #fffef5;
-    --dark-section: #2d0a1f;
+    --primary-background: #ffffff;
 
-    --primary-accent: #6a1b4d;
-    --dark-accent: #4a1235;
-    --darker-accent: #2d0a1f;
-    --light-accent: #9c3e72;
-    --muted-accent: #d4a5be;
+    --primary: #161616;
+    --accent: #911111;
 
-    --primary-text: #2d0a1f;
-    --secondary-text: #5c3d4e;
-    --muted-text: #7a5a6a;
-    --accent-text: #6a1b4d;
+    --primary-text: var(--primary);
+    --secondary-text: var(--accent);
 
     --primary-font: "Departure Mono", monospace;
     --secondary-font: "Lora", serif;
+    --header-font: "Rubik Glitch", serif;
 }

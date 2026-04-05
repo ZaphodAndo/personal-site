@@ -5,14 +5,17 @@ export const data = {
     sharedCSS: [
         getFilePath("../css/shared/variables.css"),
         getFilePath("../css/shared/utilities.css"),
-        getFilePath("../css/shared/base.css")
+        getFilePath("../css/shared/base.css"),
     ],
-    pageCSS: []
+    pageCSS: [],
 };
 
 export function render(data) {
     const title = data.title !== undefined ? data.title : data.meta.title;
-    const description = data.description !== undefined ? data.description : data.meta.description;
+    const description =
+        data.description !== undefined
+            ? data.description
+            : data.meta.description;
 
     const cssFiles = [...data.sharedCSS, ...data.pageCSS];
     const css = inlineCSS(cssFiles);
@@ -35,18 +38,25 @@ export function render(data) {
             <body>
                 <a href="#skip" class="visually-hidden">Skip to main content</a>
                 <nav>
-                    <a href="/">Ethan</a>
-                    <a href="/blog">blog</a>
-                    <a href="/notes">notes</a>
-                    <a href="/bookmarks">bookmarks</a>
-                    <a href="/reading">reading</a>
-                    <a href="/settings">settings</a>
+                    <a href="/" class="nav-header">Ethan</a>
+                    <span>
+                        <a href="/blog">blog</a>
+                        <a href="/notes">notes</a>
+                        <a href="/bookmarks">bookmarks</a>
+                        <a href="/reading">reading</a>
+                        <a href="/settings">settings</a>
+                    </span>
                 </nav>
-                <main id="skip">                            
+                <main id="skip">
                     ${data.content}
                 </main>
                 <footer>
                     <a href="/">© ethan anderson 2026</a>
+                    <div>
+                        <a href="https://bsky.app/profile/ethana.dev" target="_blank"><svg><use href="public/icons.svg#bluesky-icon" /></svg></a>
+                        <a href="https://github.com/ZaphodAndo" target="_blank"><svg><use href="public/icons.svg#github-icon" /></svg></a>
+                        <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/" target="_blank"><svg><use href="public/icons.svg#linkedin-icon" /></svg></a>
+                    </div>
                 </footer>
             </body>
         </html>
