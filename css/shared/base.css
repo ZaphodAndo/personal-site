@@ -1,16 +1,21 @@
 html {
-    background-color: var(--primary-background);
+    background-color: var(--page-background);
     color: var(--primary-text);
     font-family: var(--primary-font), monospace;
 }
 
 body {
-    max-width: 750px;
-    margin: 0 auto;
+    box-sizing: border-box;
+    max-width: 950px;
+    margin: 90px auto;
+    background-color: var(--primary-background);
+    border: 4px solid var(--page-border);
+    border-radius: 3px 25px 3px 25px;
+    padding: 0 96px;
 }
 
 a {
-    color: var(--secondary-text);
+    color: var(--accent);
 
     &:hover,
     &:focus {
@@ -23,7 +28,8 @@ nav {
     display: flex;
     flex-direction: column;
     text-align: center;
-    margin: 5.625rem 0;
+    margin: clamp(1.563rem, 0.533rem + 5.147vi, 3.75rem) 0
+        clamp(2.5rem, 1.029rem + 7.353vi, 5.625rem) 0;
 
     & span {
         display: flex;
@@ -35,20 +41,31 @@ nav {
 
 .nav-header {
     font-family: var(--header-font);
-    font-size: 7rem;
+    font-size: clamp(3.5rem, 1.853rem + 8.235vi, 7rem);
     text-decoration: none;
     color: var(--primary-text);
 
     &:hover,
     &:focus {
-        color: var(--secondary-text);
+        color: var(--accent);
     }
 }
 
 footer {
+    position: relative;
     display: flex;
     align-items: center;
-    margin: 7.5rem 0 5.625rem 0;
+    margin: 90px 0 60px 0;
+    padding-top: 20px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -50px;
+        right: -50px;
+        border-top: 2px solid var(--accent-lighter);
+    }
 
     & div {
         display: flex;
@@ -75,7 +92,7 @@ footer {
         &:hover,
         &:focus {
             text-decoration: underline;
-            color: var(--secondary-text);
+            color: var(--accent);
         }
     }
 }
