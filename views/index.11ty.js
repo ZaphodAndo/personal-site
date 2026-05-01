@@ -3,7 +3,7 @@ import { getFilePath } from "../utils/getFilePath.js";
 function constructPost(post) {
     return `
         <a href="${post.url}" class="home__post">
-            <p>${post.data.title}</p>
+            <p class="home__post-title">${post.data.title}</p>
             <p class="home__post-description">${post.data.description}</p>
             <time datetime="${post.date.toISOString()}">
                 ${post.date.toLocaleDateString("en-GB", { day: "2-digit", month: "2-digit", year: "numeric" })}

@@ -1,21 +1,30 @@
 main {
     display: flex;
     flex-direction: column;
-    gap: 60px;
+    gap: clamp(2.5rem, 1.912rem + 2.941vi, 3.75rem);
     border-left: 2px solid var(--accent-secondary);
-    padding-left: 20px;
+    padding-left: 1.25rem;
+
+    @media (max-width: 600px) {
+        border-left: none;
+        padding-left: 0;
+    }
 }
 
 .home__header {
     display: flex;
     align-items: center;
-    gap: 12px;
-    margin-bottom: 20px;
+    gap: clamp(0.625rem, 0.566rem + 0.294vi, 0.75rem);
+    margin-bottom: clamp(0.625rem, 0.331rem + 1.471vi, 1.25rem);
 }
 
 .home__header--with-description {
     align-items: unset;
     margin-bottom: 0;
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+    }
 }
 
 .home__header-number {
@@ -25,7 +34,7 @@ main {
 .home__header-title {
     font-family: var(--header-font);
     color: var(--accent-lighter);
-    font-size: 24px;
+    font-size: clamp(1.125rem, 0.949rem + 0.882vi, 1.5rem);
     font-weight: 400;
     margin: 0;
 }
@@ -33,13 +42,18 @@ main {
 .home__header-description {
     margin: 0;
     color: var(--secondary-text);
+    font-size: clamp(0.875rem, 0.816rem + 0.294vi, 1rem);
 }
 
 .home__latest-posts {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 1.25rem;
     margin-left: 33px;
+
+    @media (max-width: 600px) {
+        margin-left: 0;
+    }
 }
 
 .home__post {
@@ -59,7 +73,7 @@ main {
     }
 
     & time {
-        font-size: 14px;
+        font-size: clamp(0.625rem, 0.566rem + 0.294vi, 0.75rem);
         color: var(--secondary-text);
     }
 
@@ -69,16 +83,22 @@ main {
     }
 }
 
+.home__post-title {
+    font-size: clamp(0.875rem, 0.816rem + 0.294vi, 1rem);
+}
+
 .home__post-description {
+    font-size: clamp(0.75rem, 0.691rem + 0.294vi, 0.875rem);
     color: var(--secondary-text);
     text-transform: lowercase;
 }
 
 .home__projects-list {
+    font-size: clamp(0.875rem, 0.816rem + 0.294vi, 1rem);
     line-height: 1.7;
-    margin: 0 0 0 33px;
+    margin: 0 0 0 2.0625rem;
     padding: 0 0 0 1rem;
-    
+
     & li p {
         margin: 0;
         color: var(--secondary-text);
@@ -88,12 +108,17 @@ main {
         content: "- ";
         font-size: 1.2em;
     }
+
+    @media (max-width: 600px) {
+        margin-left: 0;
+    }
 }
 
 .home__fun-zone {
     display: flex;
-    gap: 1.25rem;
-    margin-left: 33px;
+    flex-wrap: wrap;
+    gap: clamp(0.625rem, 0.331rem + 1.471vi, 1.25rem);
+    margin-left: 2.0625rem;
 
     & button {
         display: flex;
