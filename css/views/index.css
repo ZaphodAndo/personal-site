@@ -78,8 +78,8 @@ main {
     }
 
     &:hover,
-    &:focus {
-        text-decoration: underline;
+    &:focus-visible {
+        color: var(--accent);
     }
 }
 
@@ -97,16 +97,49 @@ main {
     font-size: clamp(0.875rem, 0.816rem + 0.294vi, 1rem);
     line-height: 1.7;
     margin: 0 0 0 2.0625rem;
-    padding: 0 0 0 1rem;
+    padding: 0;
+    list-style: none;
+
+    & li {
+        position: relative;
+        padding-left: 1.5rem;
+    }
+
+    & li::before {
+        content: "-";
+        position: absolute;
+        left: 0;
+        font-size: 1.1em;
+        color: var(--accent-secondary);
+        transition:
+            transform 0.2s ease,
+            color 0.2s ease;
+    }
+
+    & li:hover::before,
+    & li:focus-within::before {
+        color: var(--accent);
+    }
+
+    & li a {
+        text-decoration: none;
+        background-image: linear-gradient(currentColor, currentColor);
+        background-position: 0 100%;
+        background-repeat: no-repeat;
+        background-size: 0% 2px;
+        transition:
+            background-size 0.25s ease,
+            color 0.2s ease;
+    }
+
+    & li a:hover,
+    & li a:focus-visible {
+        background-size: 100% 2px;
+    }
 
     & li p {
         margin: 0;
         color: var(--secondary-text);
-    }
-
-    & li::marker {
-        content: "- ";
-        font-size: 1.2em;
     }
 
     @media (max-width: 600px) {
@@ -129,6 +162,7 @@ main {
         padding: 0.5rem 0.625rem;
         cursor: pointer;
         border-radius: 3px;
+        transition: transform 0.25s ease;
 
         & svg {
             width: 1.5rem;
@@ -139,14 +173,14 @@ main {
             color: #043f81;
             fill: #043f81;
             border: 1px solid #043f81;
-            background-color: #043f811a;
+            background-color: #e5e5ea;
         }
 
         &:last-of-type {
             color: #1a8104;
             fill: #1a8104;
             border: 1px solid #1a8104;
-            background-color: #1a81041a;
+            background-color: #e8ecdd;
         }
     }
 }

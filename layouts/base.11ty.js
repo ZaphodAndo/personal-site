@@ -54,7 +54,7 @@ export function render(data) {
                     <a href="/">© ethan anderson 2026</a>
                     <div>
                         <a href="https://bsky.app/profile/ethana.dev" target="_blank"><svg><use href="public/icons.svg#bluesky-icon" /></svg></a>
-                        <a href="https://github.com/ZaphodAndo" target="_blank"><svg><use href="public/icons.svg#github-icon" /></svg></a>
+                        <a href="https://github.com/ZaphodAndo" target="_blank"><svg><use href="public/icons.svg#git-icon" /></svg></a>
                         <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/" target="_blank"><svg><use href="public/icons.svg#linkedin-icon" /></svg></a>
                     </div>
                 </footer>
