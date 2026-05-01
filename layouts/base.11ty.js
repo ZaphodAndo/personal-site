@@ -19,6 +19,7 @@ export function render(data) {
 
     const cssFiles = [...data.sharedCSS, ...data.pageCSS];
     const css = inlineCSS(cssFiles);
+    const isHome = data.page.url === "/";
 
     return `
         <!DOCTYPE html>
@@ -37,12 +38,11 @@ export function render(data) {
             </head>
             <body>
                 <a href="#skip" class="visually-hidden">Skip to main content</a>
-                <nav>
+                <nav${isHome ? "" : ' class="nav--compact"'}>
                     <a href="/" class="nav-header">Ethan</a>
                     <span>
                         <a href="/blog">blog</a>
                         <a href="/notes">notes</a>
-                        <a href="/bookmarks">bookmarks</a>
                         <a href="/reading">reading</a>
                         <a href="/settings">settings</a>
                     </span>
@@ -53,9 +53,9 @@ export function render(data) {
                 <footer>
                     <a href="/">© ethan anderson 2026</a>
                     <div>
-                        <a href="https://bsky.app/profile/ethana.dev" target="_blank"><svg><use href="public/icons.svg#bluesky-icon" /></svg></a>
-                        <a href="https://github.com/ZaphodAndo" target="_blank"><svg><use href="public/icons.svg#git-icon" /></svg></a>
-                        <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/" target="_blank"><svg><use href="public/icons.svg#linkedin-icon" /></svg></a>
+                        <a href="https://bsky.app/profile/ethana.dev" target="_blank"><svg><use href="/public/icons.svg#bluesky-icon" /></svg></a>
+                        <a href="https://github.com/ZaphodAndo" target="_blank"><svg><use href="/public/icons.svg#git-icon" /></svg></a>
+                        <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/" target="_blank"><svg><use href="/public/icons.svg#linkedin-icon" /></svg></a>
                     </div>
                 </footer>
             </body>

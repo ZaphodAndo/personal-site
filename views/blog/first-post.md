@@ -1,5 +1,5 @@
 ---
-layout: base.11ty.js
+layout: post.11ty.js
 title: This is my first post
 description: This is my very first post on my brand new blog.
 date: 2024-01-22

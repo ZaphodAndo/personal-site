@@ -82,6 +82,28 @@ nav {
     }
 }
 
+nav.nav--compact {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    flex-wrap: wrap;
+    gap: 0.625rem;
+
+    & .nav-header {
+        font-size: 3.5rem;
+    }
+
+    & > span {
+        margin-top: 0;
+    }
+
+    @media (max-width: 600px) {
+        flex-direction: column;
+        justify-content: center;
+    }
+}
+
 footer {
     position: relative;
     display: flex;

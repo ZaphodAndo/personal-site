@@ -1,5 +1,5 @@
 ---
-layout: base.11ty.js
+layout: post.11ty.js
 title: KeyboardEvent quirks with macOS
 description: Why did Tim Apple do this to us?
 date: 2024-04-30

@@ -1,5 +1,5 @@
 ---
-layout: base.11ty.js
+layout: post.11ty.js
 title: Home cooked links
 description: A few interesting links about home cooked apps.
 date: 2024-01-26
