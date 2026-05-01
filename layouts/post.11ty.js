@@ -3,7 +3,10 @@ import { getFilePath } from "../utils/getFilePath.js";
 export const data = {
     layout: "base.11ty.js",
     title: "Ethan Anderson - Blog",
-    pageCSS: [getFilePath("../css/views/post.css")],
+    pageCSS: [
+        getFilePath("../css/views/post.css"),
+        getFilePath("../css/shared/code-block.css"),
+    ],
 };
 
 export function render(data) {
@@ -15,7 +18,7 @@ export function render(data) {
                 ${data.date.toLocaleDateString("en-GB", {
                     day: "2-digit",
                     month: "2-digit",
-                    year: "numeric"
+                    year: "numeric",
                 })}
             </time>
             <span>·</span>

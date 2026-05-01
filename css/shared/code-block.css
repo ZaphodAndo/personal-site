@@ -1,0 +1,84 @@
+pre[class*="language-"] {
+    background-color: var(--primary);
+    color: var(--primary-background);
+    font-family: var(--primary-font);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    padding: 1rem 1.25rem;
+    border-radius: 4px;
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+pre[class*="language-"] code {
+    background: none;
+    color: inherit;
+    padding: 0;
+    border-radius: 0;
+    font-family: inherit;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+    color: #8a8a8a;
+    font-style: italic;
+}
+
+.token.punctuation {
+    color: #c9c9c9;
+}
+
+.token.keyword,
+.token.tag,
+.token.selector,
+.token.important,
+.token.atrule {
+    color: var(--accent-lighter);
+}
+
+.token.string,
+.token.attr-value,
+.token.char,
+.token.regex {
+    color: #f3c98b;
+}
+
+.token.function,
+.token.class-name {
+    color: var(--accent-secondary);
+}
+
+.token.number,
+.token.boolean,
+.token.constant,
+.token.symbol {
+    color: #f3c98b;
+}
+
+.token.operator,
+.token.entity,
+.token.url {
+    color: #e2ddf8;
+}
+
+.token.property,
+.token.attr-name,
+.token.variable {
+    color: #b8b3f0;
+}
+
+.token.deleted-sign.deleted,
+pre.diff-highlight > code .token.deleted-sign.deleted {
+    background-color: rgba(197, 77, 38, 0.22);
+    color: inherit;
+    display: block;
+}
+
+.token.inserted-sign.inserted,
+pre.diff-highlight > code .token.inserted-sign.inserted {
+    background-color: rgba(106, 96, 215, 0.22);
+    color: inherit;
+    display: block;
+}
