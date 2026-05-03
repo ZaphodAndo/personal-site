@@ -1,0 +1,41 @@
+import { getFilePath } from "../utils/getFilePath.js";
+import { getAllTags, filterTagList } from "../utils/tags.js";
+import { slugify } from "../utils/slugify.js";
+
+export const data = {
+    layout: "home.11ty.js",
+    permalink: "/tags/",
+    title: "Ethan Anderson - Tags",
+    pageCSS: [
+        getFilePath("../css/shared/header.css"),
+        getFilePath("../css/views/tags.css"),
+    ],
+};
+
+export function render(data) {
+    const all = data.collections?.all ?? [];
+    const tags = filterTagList(getAllTags(all));
+
+    const tagLinks = tags
+        .map(
+            (tag) =>
+                `<a href="/tags/${slugify(tag)}/" class="post-tag">${tag}</a>`,
+        )
+        .join("\n            ");
+
+    return `
+        <header>
+            <div class="header-content">
+                <a class="home-link" href="/">Home</a>
+                <h1>Tags</h1>
+                <p>A list of all tags.</p>
+            </div>
+        </header>
+
+        <main id="skip">
+            <div class="tags-content tags-list">
+                ${tagLinks}
+            </div>
+        </main>
+    `;
+}
