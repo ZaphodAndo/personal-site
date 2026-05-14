@@ -3,7 +3,7 @@ import { slugify } from "../utils/slugify.js";
 import { postsList } from "../utils/components/postsList.js";
 
 export const data = {
-    layout: "home.11ty.js",
+    layout: "base.11ty.js",
     pagination: {
         data: "collections",
         size: 1,

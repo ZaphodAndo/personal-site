@@ -1,0 +1,55 @@
+@font-face {
+	font-family: "Lora";
+	src: url("/fonts/Lora-VariableFont_wght.ttf") format("truetype");
+	font-display: fallback;
+}
+
+@font-face {
+	font-family: "Gorton";
+	src: url("/fonts/GortonPerfectedVF.woff2") format("woff2");
+	font-display: fallback;
+}
+
+/* Defaults */
+:root {
+	--syntax-tab-size: 2;
+	--font-family: "Gorton";
+	--secondary-font-family: "Lora";
+	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono,
+		Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono,
+		Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New,
+		Courier, monospace;
+}
+
+/* Theme colors */
+:root {
+	--colour-black: hsla(0, 0%, 0%, 1);
+	--colour-yellow: hsla(61, 76%, 72%, 1);
+	--colour-blue: hsla(165, 56%, 71%, 1);
+	--colour-purple: hsla(300, 60%, 82%, 1);
+	--colour-green: hsla(94, 48%, 80%, 1);
+	--colour-red: hsla(0, 97%, 77%, 1);
+	--colour-white: hsla(60, 51%, 91%, 1);
+	--colour-orange: hsla(17, 89%, 60%, 1);
+
+	--background-colour: var(--colour-white);
+	--header-colour: var(--colour-yellow);
+	--border-colour: var(--colour-black);
+
+	--text-colour: var(--colour-black);
+	--subtle-text-colour: var(--colour-black);
+	--text-colour-link: var(--colour-black);
+	--text-colour-header: var(--colour-black);
+
+	--hover-link-background-colour: var(--colour-black);
+	--hover-link-text-colour: var(--colour-yellow);
+
+	--icon-fill-colour: var(--colour-black);
+
+	--postlist-item-background-one-colour: var(--colour-black);
+	--postlist-item-background-two-colour: var(--colour-black);
+	--postlist-item-background-three-colour: var(--colour-black);
+	--postlist-item-background-four-colour: var(--colour-black);
+
+	color-scheme: light;
+}

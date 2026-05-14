@@ -1,7 +1,7 @@
 import { getFilePath } from "../utils/getFilePath.js";
 
 export const data = {
-    layout: "home.11ty.js",
+    layout: "base.11ty.js",
     permalink: "404.html",
     eleventyExcludeFromCollections: true,
     title: "Ethan Anderson - 404",

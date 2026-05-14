@@ -3,7 +3,7 @@ import { getAllTags, filterTagList } from "../utils/tags.js";
 import { slugify } from "../utils/slugify.js";
 
 export const data = {
-    layout: "home.11ty.js",
+    layout: "base.11ty.js",
     permalink: "/tags/",
     title: "Ethan Anderson - Tags",
     pageCSS: [

@@ -6,10 +6,9 @@ The latest iteration of my personal site and blog.
 
 ### Home
 
-1. Update bio
-2. Add projects setion
-3. Add "Fun" Zone functionality.
-4. Look into improving "Fun" Zone button styling.
+1. Add projects setion
+2. Add "Fun" Zone functionality.
+3. Look into improving "Fun" Zone button styling.
 
 ### Posts
 
@@ -29,5 +28,4 @@ The latest iteration of my personal site and blog.
 
 1. Get things like og meta-stuff and manifest file sorted.
 2. Add view transitions.
-3. Update the footer.
-4. Add proper nav bar
+3. Add proper nav bar
