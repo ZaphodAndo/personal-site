@@ -2,7 +2,7 @@ import { getFilePath } from "../utils/getFilePath.js";
 
 export const data = {
     layout: "base.11ty.js",
-    title: "Ethan Anderson - Archive",
+    title: "Blog - Ethan Anderson",
     eleventyNavigation: {
         key: "Archive",
         order: 2,
@@ -42,8 +42,13 @@ export function render(data) {
     return `
         <header>
             <div class="header-content">
-                <a class="home-link" href="/">Home</a>
-                <h1>Archive</h1>
+                <div class="header-nav">
+                    <a class="home-link" href="/">Home</a>
+                    <a href="/menu" aria-label="Menu">
+                        <svg><use href="/public/icons.svg#menu-icon" /></svg>
+                    </a>
+                </div>
+                <h1>Blog</h1>
                 <p>
                     An <a class="fat-hover-link" href="/feed/feed.xml">RSS feed</a> and a
                     <a class="fat-hover-link" href="/tags">list of tags</a> are also

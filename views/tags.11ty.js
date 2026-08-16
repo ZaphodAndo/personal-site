@@ -12,7 +12,7 @@ export const data = {
         addAllPagesToCollections: true,
     },
     eleventyComputed: {
-        title: (data) => `Ethan Anderson - Tagged "${data.tag}"`,
+        title: (data) => `Tagged "${data.tag}" - Ethan Anderson`,
         permalink: (data) => `/tags/${slugify(data.tag)}/`,
     },
     pageCSS: [
@@ -27,7 +27,12 @@ export function render(data) {
     return `
         <header>
             <div class="header-content">
-                <a class="home-link" href="/">Home</a>
+                <div class="header-nav">
+                    <a class="home-link" href="/">Home</a>
+                    <a href="/menu" aria-label="Menu">
+                        <svg><use href="/public/icons.svg#menu-icon" /></svg>
+                    </a>
+                </div>
                 <h1>Tagged "${data.tag}"</h1>
                 <p>See <a class="fat-hover-link" href="/tags/">all tags</a>.</p>
             </div>

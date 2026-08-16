@@ -5,7 +5,7 @@ import { slugify } from "../utils/slugify.js";
 export const data = {
     layout: "base.11ty.js",
     permalink: "/tags/",
-    title: "Ethan Anderson - Tags",
+    title: "Tags - Ethan Anderson",
     pageCSS: [
         getFilePath("../css/shared/header.css"),
         getFilePath("../css/views/tags.css"),
@@ -26,7 +26,12 @@ export function render(data) {
     return `
         <header>
             <div class="header-content">
-                <a class="home-link" href="/">Home</a>
+                <div class="header-nav">
+                    <a class="home-link" href="/">Home</a>
+                    <a href="/menu" aria-label="Menu">
+                        <svg><use href="/public/icons.svg#menu-icon" /></svg>
+                    </a>
+                </div>
                 <h1>Tags</h1>
                 <p>A list of all tags.</p>
             </div>

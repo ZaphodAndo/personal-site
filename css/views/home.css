@@ -1,44 +1,77 @@
 .header-content p {
-	font-weight: 400;
-	font-size: clamp(1rem, 0.3226rem + 3.871vw, 2.5rem);
-	color: var(--subtle-text-colour);
-	margin: unset;
-	text-wrap: balance;
+    font-weight: 400;
+    font-size: clamp(1rem, 0.3226rem + 3.871vw, 2.5rem);
+    color: var(--subtle-text-colour);
+    margin: unset;
+    text-wrap: balance;
 }
 .home-link {
-	font-family: var(--secondary-font-family);
-	font-size: clamp(2.5rem, 0.8065rem + 9.6774vw, 6.25rem);
-	font-weight: 700;
-	color: var(--text-colour-header);
-	text-decoration: unset;
-	margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
+    font-family: var(--secondary-font-family);
+    font-size: clamp(2.5rem, 0.8065rem + 9.6774vw, 6.25rem);
+    font-weight: 700;
+    color: var(--text-colour-header);
+    text-decoration: unset;
+    margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
 }
 .home-link[href]:hover,
 .home-link[href]:focus {
-	text-decoration: underline;
+    text-decoration: underline;
 }
 
 main {
-	display: flex;
-	justify-content: center;
-	margin: 8vw;
+    display: flex;
+    justify-content: center;
+    margin: 8vw;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0 0 0 auto;
+    list-style: none;
+}
+.nav-item {
+    display: flex;
+    padding: 0.75rem;
+    max-width: fit-content;
+    background-color: var(--colour-green);
+    border: 2px solid var(--colour-black);
+    transition: background-color 0.2s ease-out;
+
+    & svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+.nav-item:last-of-type {
+    margin-top: -2px;
+    background-color: var(--colour-purple);
+}
+.nav-item[href]:hover,
+.nav-item[href]:focus {
+    background-color: var(--colour-black);
+    fill: var(--colour-white);
+}
+.nav-item[href]:not(:hover) {
+    text-decoration: none;
 }
 
 .posts {
-	max-width: 900px;
-	width: 100%;
+    max-width: 900px;
+    width: 100%;
 }
 
 .postlist-title {
-	color: var(--text-colour-header);
-	font-family: var(--secondary-font-family);
-	font-weight: 700;
-	font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
-	margin: 0;
+    color: var(--text-colour-header);
+    font-family: var(--secondary-font-family);
+    font-weight: 700;
+    font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
+    margin: 0;
 }
 
 .posts-head {
-	display: flex;
-	align-items: center;
-	margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
+    display: flex;
+    align-items: center;
+    margin-bottom: clamp(1.25rem, 0.261rem + 5.6516vw, 3.44rem);
 }

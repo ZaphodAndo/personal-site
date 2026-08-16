@@ -14,6 +14,7 @@ The latest iteration of my personal site and blog.
 
 1. Add support for comments.
 2. Add posts to atmosphere.
+3. Update the rebuild post.
 
 ### Settings
 
@@ -28,4 +29,5 @@ The latest iteration of my personal site and blog.
 
 1. Get things like og meta-stuff and manifest file sorted.
 2. Add view transitions.
-3. Add proper nav bar
+4. Refactor CSS.
+5. Cleanup things by making reusable components for stuff like the header.

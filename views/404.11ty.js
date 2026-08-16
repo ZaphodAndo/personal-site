@@ -4,7 +4,7 @@ export const data = {
     layout: "base.11ty.js",
     permalink: "404.html",
     eleventyExcludeFromCollections: true,
-    title: "Ethan Anderson - 404",
+    title: "404 - Ethan Anderson",
     pageCSS: [getFilePath("../css/views/404.css")],
 };
 

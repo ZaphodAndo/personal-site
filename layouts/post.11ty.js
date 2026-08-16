@@ -42,7 +42,12 @@ export function render(data) {
     return `
         <header>
             <div class="header-content">
-                <a class="home-link" href="/">Home</a>
+                <div class="header-nav">
+                    <a class="home-link" href="/">Home</a>
+                    <a href="/menu" aria-label="Menu">
+                        <svg><use href="/public/icons.svg#menu-icon" /></svg>
+                    </a>
+                </div>
                 <h1>${data.title}</h1>
                 <time datetime="${htmlDateString(data.page.date)}">${readableDate(data.page.date)}</time>
             </div>

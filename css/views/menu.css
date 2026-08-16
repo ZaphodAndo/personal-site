@@ -1,0 +1,115 @@
+header {
+    display: flex;
+    align-items: center;
+    margin: 8vw 24vw 1rem 24vw;
+    justify-content: unset;
+    background-color: unset;
+}
+
+nav {
+    display: flex;
+    margin: 0 0 0 auto;
+
+    & a {
+        display: flex;
+        margin: 0 0 0 auto;
+        position: relative;
+        isolation: isolate;
+
+        &::before {
+            content: "";
+            position: absolute;
+            inset: calc(-0.75rem - 2px);
+            border: 2px solid transparent;
+            background-color: transparent;
+            transition:
+                background-color 0.25s ease-out,
+                border-color 0.25s ease-out;
+            z-index: -1;
+            border-radius: 50%;
+        }
+
+        &:hover::before,
+        &:focus-visible::before {
+            background-color: var(--colour-green);
+            border-color: var(--colour-black);
+        }
+    }
+
+    & svg {
+        width: 2rem;
+        height: 2rem;
+    }
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    margin: 0 24vw 8vw 24vw;
+}
+
+h1 {
+    font-weight: 500;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 0.1rem solid var(--border-colour);
+    transition: background-color 0.2s ease-out;
+
+    & a {
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+            padding: 1rem;
+        width: 100%;
+        text-decoration: none;
+        font-size: clamp(0.875rem, 0.8185rem + 0.3226vw, 1rem);
+
+        & svg {
+            width: 2rem;
+            height: 2rem;
+        }
+
+        & svg:last-of-type {
+            margin: 0 0 0 auto;
+            width: 1.6rem;
+            height: 1.6rem;
+            transition: transform 0.2s ease-in-out;
+        }
+    }
+
+    &:last-of-type {
+        border-top: none;
+    }
+
+    &:hover,
+    &:focus-within {
+        background-color: var(--colour-black);
+
+        & a {
+            color: var(--colour-white);
+        }
+
+        svg {
+            fill: var(--colour-white);
+        }
+
+        & svg:last-of-type {
+            transform: translateX(4px);
+        }
+    }
+}
+
+.blog-link {
+    background-color: var(--colour-purple);
+}
+
+.tags-link {
+    background-color: var(--colour-blue);
+}

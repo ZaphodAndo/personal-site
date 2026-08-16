@@ -2,12 +2,14 @@ import { getFilePath } from "../utils/getFilePath.js";
 import { inlineCSS } from "../utils/inlineCSS.js";
 
 export const data = {
+    eleventyExcludeFromCollections: true,
+    title: "Menu - Ethan Anderson",
     sharedCSS: [
         getFilePath("../css/shared/variables.css"),
         getFilePath("../css/shared/utilities.css"),
         getFilePath("../css/shared/base.css"),
     ],
-    pageCSS: [],
+    pageCSS: [getFilePath("../css/views/menu.css")],
 };
 
 export function render(data) {
@@ -39,31 +41,32 @@ export function render(data) {
             </head>
 			<body>
                 <a href="#skip" class="visually-hidden">Skip to main content</a>
-
-                ${data.content}
-
-                <footer>
-                    <div class="footer-content">
-                      <a href="/" class="fat-hover-link">© Ethan Anderson 2026</a>
-                   			<div class="footer-links">
-                          <a href="/blog" aria-label="Blog">
-                              <svg><use href="/public/icons.svg#blog-icon" /></svg>
-                          </a>
-                          <a href="/feed/feed.xml" aria-label="RSS">
-                              <svg><use href="/public/icons.svg#rss-icon" /></svg>
-                          </a>
-                          <a href="https://bsky.app/profile/ethana.dev" target="_blank" aria-label="Bluesky (Opens in a new tab)">
-                              <svg><use href="/public/icons.svg#bluesky-icon" /></svg>
-                          </a>
-                      		<a href="https://github.com/ZaphodAndo" target="_blank" aria-label="Github (Opens in a new tab)">
-                              <svg><use href="/public/icons.svg#git-icon" /></svg>
-                          </a>
-                          <a href="https://www.linkedin.com/in/ethan-anderson-41ba9a172/" target="_blank" aria-label="Linkedin (Opens in a new tab)">
-                              <svg><use href="/public/icons.svg#linkedin-icon" /></svg>
-                          </a>
-                        </div>
-                    </div>
-                </footer>
+                <header>
+                    <h1>Menu</h1>
+                    <nav>
+                        <a href="/" onclick="document.referrer ? history.back() : window.location.href = '/'; return false;">
+                            <svg><use href="/public/icons.svg#close-icon" /></svg>
+                        </a>
+                    </nav>
+                </header>
+                <main id="skip">
+                    <ul>
+                        <li class="blog-link">
+                            <a href="/blog">
+                                <svg><use href="/public/icons.svg#blog-icon" /></svg>
+                                <span>Blog</span>
+                                <svg><use href="/public/icons.svg#chevron-icon" /></svg>
+                            </a>
+                        </li>
+                        <li class="tags-link">
+                            <a href="/tags">
+                                <svg><use href="/public/icons.svg#tag-icon" /></svg>
+                                <span>Tags</span>
+                                <svg><use href="/public/icons.svg#chevron-icon" /></svg>
+                            </a>
+                        </li>
+                    </ul>
+                </main>
             </body>
         </html>
     `;

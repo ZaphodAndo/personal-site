@@ -6,7 +6,7 @@ const NUMBER_OF_LATEST_POSTS = 4;
 
 export const data = {
     layout: "base.11ty.js",
-    title: "Ethan Anderson - Home",
+    title: "Home - Ethan Anderson",
     pageCSS: [getFilePath("../css/views/home.css")],
 };
 
