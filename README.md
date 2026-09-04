@@ -27,7 +27,6 @@ The latest iteration of my personal site and blog.
 
 ### General
 
-1. Get things like og meta-stuff and manifest file sorted.
-2. Add view transitions.
-4. Refactor CSS.
-5. Cleanup things by making reusable components for stuff like the header.
+1. Add view transitions.
+2. Refactor CSS.
+3. Cleanup things by making reusable components for stuff like the header.

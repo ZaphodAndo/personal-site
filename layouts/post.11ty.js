@@ -5,6 +5,7 @@ import { slugify } from "../utils/slugify.js";
 
 export const data = {
     layout: "base.11ty.js",
+    ogType: "article",
     pageCSS: [
         getFilePath("../css/shared/header.css"),
         getFilePath("../css/views/post.css"),

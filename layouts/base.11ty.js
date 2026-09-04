@@ -20,6 +20,25 @@ export function render(data) {
     const cssFiles = [...data.sharedCSS, ...data.pageCSS];
     const css = inlineCSS(cssFiles);
 
+    const siteUrl = data.meta.url.replace(/\/$/, "");
+    const pageUrl = `${siteUrl}${data.page.url}`;
+    const ogType = data.ogType || "website";
+    const ogImage = `${siteUrl}${data.ogImage || "/public/icon-512.png"}`;
+
+    const articleMeta =
+        ogType === "article"
+            ? `
+                <meta property="article:published_time" content="${data.page.date.toISOString()}" />
+                <meta property="article:author" content="${data.meta.author.name}" />
+                ${(data.tags || [])
+                    .filter((t) => t !== "post")
+                    .map(
+                        (t) =>
+                            `<meta property="article:tag" content="${t}" />`,
+                    )
+                    .join("")}`
+            : "";
+
     return `
         <!DOCTYPE html>
         <html lang="${data.meta.language}">
@@ -30,9 +49,24 @@ export function render(data) {
                 <meta name="description" content="${description}" />
                 <meta name="generator" content="${data.eleventy.generator}" />
                 <meta name="fediverse:creator" content="${data.meta.author.mastodon}"/>
+                <meta name="theme-color" content="#f4f4dc" />
+
+                <meta property="og:title" content="${title}" />
+                <meta property="og:description" content="${description}" />
+                <meta property="og:url" content="${pageUrl}" />
+                <meta property="og:type" content="${ogType}" />
+                <meta property="og:image" content="${ogImage}" />
+                <meta property="og:image:alt" content="${data.ogImageAlt || data.meta.title}" />
+                <meta property="og:site_name" content="${data.meta.title}" />
+                <meta property="og:locale" content="en_US" />
+                ${articleMeta}
+
                 <link rel="alternate" href="/feed/feed.xml" type="application/atom+xml" title="${data.meta.title}" />
                 <link rel="alternate" href="/feed/feed.json" type="application/json" title="${data.meta.title}" />
                 <link rel="icon" type="image/png" href="/public/favicon.ico" />
+                <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
+                <link rel="manifest" href="/public/site.webmanifest" />
+                <link rel="canonical" href="${pageUrl}" />
                 <link rel="me" href="https://social.lol/@zaphod" />
                 <link rel="me" href="https://sifa.id/p/ethana.dev" />
                 <style>${css}</style>

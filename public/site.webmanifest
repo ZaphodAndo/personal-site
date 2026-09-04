@@ -1,0 +1,28 @@
+{
+	"name": "Ethan Anderson",
+	"short_name": "ethana.dev",
+	"description": "Ethan is an applications developer at a company called PebblePad.",
+	"start_url": "/",
+	"scope": "/",
+	"display": "minimal-ui",
+	"theme_color": "#f4f4dc",
+	"background_color": "#f4f4dc",
+	"icons": [
+		{
+			"src": "/public/icon-192.png",
+			"sizes": "192x192",
+			"type": "image/png"
+		},
+		{
+			"src": "/public/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png"
+		},
+		{
+			"src": "/public/icon-512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"purpose": "maskable"
+		}
+	]
+}
