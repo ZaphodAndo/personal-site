@@ -49,7 +49,7 @@ export function render(data) {
                         <svg><use href="/public/icons.svg#menu-icon" /></svg>
                     </a>
                 </div>
-                <h1>${data.title}</h1>
+                <h1 style="view-transition-name: post-title-${slugify(data.page.url)}">${data.title}</h1>
                 <time datetime="${htmlDateString(data.page.date)}">${readableDate(data.page.date)}</time>
             </div>
         </header>

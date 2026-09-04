@@ -1,4 +1,5 @@
 import { getFilePath } from "../utils/getFilePath.js";
+import { slugify } from "../utils/slugify.js";
 
 export const data = {
     layout: "base.11ty.js",
@@ -32,7 +33,7 @@ export function render(data) {
                 .reverse()
                 .map(
                     (post) =>
-                        `<li><a class="fat-hover-link" href="${post.url}">${post.data.title}</a></li>`,
+                        `<li><a class="fat-hover-link" href="${post.url}" style="view-transition-name: post-title-${slugify(post.url)}">${post.data.title}</a></li>`,
                 )
                 .join("");
             return `<h2>${year}</h2><ol reversed>${items}</ol>`;

@@ -346,3 +346,15 @@ a[href].header-anchor:focus,
 h2 + .header-anchor {
     font-size: 1.5em;
 }
+
+@view-transition {
+    navigation: auto;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    ::view-transition-group(*),
+    ::view-transition-old(*),
+    ::view-transition-new(*) {
+        animation: none !important;
+    }
+}

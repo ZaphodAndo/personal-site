@@ -1,7 +1,9 @@
 header {
     display: flex;
     align-items: center;
-    margin: 8vw 24vw 1rem 24vw;
+    max-width: 31.25rem;
+    margin: 8vw auto 1rem;
+    padding: 0 1rem;
     justify-content: unset;
     background-color: unset;
 }
@@ -45,7 +47,9 @@ nav {
 main {
     display: flex;
     flex-direction: column;
-    margin: 0 24vw 8vw 24vw;
+    max-width: 31.25rem;
+    margin: 0 auto 8vw;
+    padding: 0 1rem;
 }
 
 h1 {

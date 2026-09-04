@@ -1,4 +1,5 @@
 import { readableDate, htmlDateString } from "../dates.js";
+import { slugify } from "../slugify.js";
 
 export function postsList({ posts, currentUrl, counterStart }) {
     const start = (counterStart ?? posts.length) + 1;
@@ -11,7 +12,7 @@ export function postsList({ posts, currentUrl, counterStart }) {
                 : `<code>${post.url}</code>`;
             return `
             <a href="${post.url}" class="postlist-item${isActive ? " postlist-item-active" : ""}" title="${post.data.title ?? ""}">
-                <p class="post-title">${title}</p>
+                <p class="post-title" style="view-transition-name: post-title-${slugify(post.url)}">${title}</p>
                 <time class="post-date" datetime="${htmlDateString(post.date)}">${readableDate(post.date)}</time>
             </a>`;
         })

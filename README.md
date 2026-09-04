@@ -27,6 +27,5 @@ The latest iteration of my personal site and blog.
 
 ### General
 
-1. Add view transitions.
-2. Refactor CSS.
-3. Cleanup things by making reusable components for stuff like the header.
+1. Refactor CSS.
+2. Cleanup things by making reusable components for stuff like the header.

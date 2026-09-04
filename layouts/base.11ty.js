@@ -70,6 +70,18 @@ export function render(data) {
                 <link rel="me" href="https://social.lol/@zaphod" />
                 <link rel="me" href="https://sifa.id/p/ethana.dev" />
                 <style>${css}</style>
+                <script>
+                    addEventListener("pageswap", (e) => {
+                        if (!e.viewTransition) return;
+                        const toPath = new URL(e.activation.entry.url).pathname;
+                        const toPost = /^\\/blog\\/[^/]+\\/?$/.test(toPath);
+                        document.querySelectorAll('[style*="view-transition-name: post-title"]').forEach((el) => {
+                            const link = el.closest("a[href]");
+                            const keep = toPost && link && new URL(link.href).pathname === toPath;
+                            if (!keep) el.style.viewTransitionName = "none";
+                        });
+                    });
+                </script>
             </head>
 			<body>
                 <a href="#skip" class="visually-hidden">Skip to main content</a>
