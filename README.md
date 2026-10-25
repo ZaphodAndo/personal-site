@@ -12,12 +12,10 @@ The latest iteration of my personal site and blog.
 
 1. Add support for comments.
 2. Add posts to atmosphere.
-3. Update the rebuild post.
 
 ### Settings
 
-1. Dark theme toggle
-2. Cursor trail
+1. Cursor trail
 
 ### Notes
 

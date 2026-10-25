@@ -121,6 +121,10 @@ li {
     background-color: var(--colour-purple);
 }
 
+.notes-link {
+    background-color: var(--colour-yellow);
+}
+
 .tags-link {
     background-color: var(--colour-blue);
 }

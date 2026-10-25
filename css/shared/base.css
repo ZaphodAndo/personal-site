@@ -297,6 +297,24 @@ footer {
     font-size: clamp(0.875rem, 0.8185rem + 0.3226vw, 1rem);
 }
 
+/* Year headings on the blog and notes pages, with a diamond signpost */
+.year-heading {
+    display: flex;
+    align-items: center;
+    gap: clamp(0.875rem, 0.6rem + 1vw, 1.25rem);
+
+    &::before {
+        content: "";
+        flex-shrink: 0;
+        box-sizing: border-box;
+        width: 0.55em;
+        height: 0.55em;
+        rotate: 45deg;
+        border: 2px solid var(--colour-black);
+        background-color: var(--colour-yellow);
+    }
+}
+
 /* Tags */
 .post-tag {
     text-transform: capitalize;

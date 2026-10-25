@@ -36,7 +36,7 @@ export function render(data) {
                         `<li><a class="fat-hover-link" href="${post.url}" style="view-transition-name: post-title-${slugify(post.url)}">${post.data.title}</a></li>`,
                 )
                 .join("");
-            return `<h2>${year}</h2><ol reversed>${items}</ol>`;
+            return `<h2 class="year-heading">${year}</h2><ol reversed>${items}</ol>`;
         })
         .join("");
 

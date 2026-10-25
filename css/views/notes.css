@@ -1,0 +1,44 @@
+main {
+	display: flex;
+	justify-content: center;
+	margin: 8vw;
+}
+
+.notes-content {
+	width: 100%;
+	max-width: 900px;
+}
+
+.notes-year {
+	color: var(--text-colour-header);
+	font-family: var(--secondary-font-family);
+	font-weight: 700;
+	font-size: clamp(1.875rem, 1.0282rem + 4.8387vw, 3.75rem);
+	margin: clamp(3rem, 2rem + 4vw, 5.5rem) 0 clamp(1.25rem, 0.75rem + 2vw, 2.5rem);
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+.notes-month {
+	color: var(--text-colour-header);
+	font-family: var(--secondary-font-family);
+	font-weight: 700;
+	font-size: clamp(1.25rem, 0.95rem + 1.5vw, 2rem);
+	margin: 0 0 1.25rem;
+}
+
+ol {
+	color: var(--subtle-text-colour);
+	margin: 0 0 clamp(2.75rem, 2rem + 2.5vw, 4rem);
+}
+ol:last-of-type {
+	margin-bottom: 0;
+}
+
+li {
+	font-size: clamp(1rem, 0.6048rem + 2.2581vw, 1.875rem);
+	font-weight: 500;
+	margin-bottom: 1.25rem;
+}

@@ -60,6 +60,13 @@ export function render(data) {
                                 <svg aria-hidden="true"><use href="/public/icons.svg#chevron-icon" /></svg>
                             </a>
                         </li>
+                        <li class="notes-link">
+                            <a href="/notes">
+                                <svg aria-hidden="true"><use href="/public/icons.svg#note-icon" /></svg>
+                                <span>Notes</span>
+                                <svg aria-hidden="true"><use href="/public/icons.svg#chevron-icon" /></svg>
+                            </a>
+                        </li>
                         <li class="tags-link">
                             <a href="/tags">
                                 <svg aria-hidden="true"><use href="/public/icons.svg#tag-icon" /></svg>
