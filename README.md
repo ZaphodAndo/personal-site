@@ -6,9 +6,7 @@ The latest iteration of my personal site and blog.
 
 ### Home
 
-1. Add projects setion
-2. Add "Fun" Zone functionality.
-3. Look into improving "Fun" Zone button styling.
+1. Add "Fun" Zone functionality.
 
 ### Posts
 
