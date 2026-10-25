@@ -1,5 +1,6 @@
 import { getFilePath } from "../utils/getFilePath.js";
 import { inlineCSS } from "../utils/inlineCSS.js";
+import { themeScript } from "../utils/themeScript.js";
 
 export const data = {
     sharedCSS: [
@@ -49,7 +50,9 @@ export function render(data) {
                 <meta name="description" content="${description}" />
                 <meta name="generator" content="${data.eleventy.generator}" />
                 <meta name="fediverse:creator" content="${data.meta.author.mastodon}"/>
-                <meta name="theme-color" content="#f4f4dc" />
+                <meta name="theme-color" content="#f4f4dc" media="(prefers-color-scheme: light)" />
+                <meta name="theme-color" content="#181816" media="(prefers-color-scheme: dark)" />
+                ${themeScript}
 
                 <meta property="og:title" content="${title}" />
                 <meta property="og:description" content="${description}" />

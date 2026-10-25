@@ -33,24 +33,34 @@
 	--colour-paper: hsla(60, 100%, 98%, 1);
 	--colour-orange: hsla(17, 89%, 60%, 1);
 
-	--background-colour: var(--colour-white);
-	--header-colour: var(--colour-yellow);
-	--border-colour: var(--colour-black);
+	--colour-night: hsla(60, 6%, 9%, 1);
+	--colour-dusk: hsla(60, 5%, 15%, 1);
 
-	--text-colour: var(--colour-black);
-	--subtle-text-colour: var(--colour-black);
-	--text-colour-link: var(--colour-black);
-	--text-colour-header: var(--colour-black);
+	--background-colour: light-dark(var(--colour-white), var(--colour-night));
+	--header-colour: light-dark(var(--colour-yellow), var(--colour-dusk));
+	--surface-colour: light-dark(var(--colour-paper), var(--colour-dusk));
+	--border-colour: light-dark(var(--colour-black), var(--colour-white));
 
-	--hover-link-background-colour: var(--colour-black);
-	--hover-link-text-colour: var(--colour-yellow);
+	--text-colour: light-dark(var(--colour-black), var(--colour-white));
+	--subtle-text-colour: light-dark(var(--colour-black), var(--colour-white));
+	--text-colour-link: light-dark(var(--colour-black), var(--colour-white));
+	--text-colour-header: light-dark(var(--colour-black), var(--colour-yellow));
 
-	--icon-fill-colour: var(--colour-black);
+	--hover-link-background-colour: light-dark(var(--colour-black), var(--colour-yellow));
+	--hover-link-text-colour: light-dark(var(--colour-yellow), var(--colour-black));
 
-	--postlist-item-background-one-colour: var(--colour-black);
-	--postlist-item-background-two-colour: var(--colour-black);
-	--postlist-item-background-three-colour: var(--colour-black);
-	--postlist-item-background-four-colour: var(--colour-black);
+	--icon-fill-colour: light-dark(var(--colour-black), var(--colour-white));
 
+	--postlist-item-background-one-colour: light-dark(var(--colour-black), var(--colour-green));
+	--postlist-item-background-two-colour: light-dark(var(--colour-black), var(--colour-purple));
+	--postlist-item-background-three-colour: light-dark(var(--colour-black), var(--colour-blue));
+	--postlist-item-background-four-colour: light-dark(var(--colour-black), var(--colour-red));
+
+	color-scheme: light dark;
+}
+:root[data-theme="light"] {
 	color-scheme: light;
+}
+:root[data-theme="dark"] {
+	color-scheme: dark;
 }

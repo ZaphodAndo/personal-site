@@ -1,5 +1,6 @@
 import { getFilePath } from "../utils/getFilePath.js";
 import { inlineCSS } from "../utils/inlineCSS.js";
+import { themeScript } from "../utils/themeScript.js";
 
 export const data = {
     eleventyExcludeFromCollections: true,
@@ -37,6 +38,7 @@ export function render(data) {
                 <link rel="icon" type="image/png" href="/public/favicon.ico" />
                 <link rel="me" href="https://social.lol/@zaphod" />
                 <link rel="me" href="https://sifa.id/p/ethana.dev" />
+                ${themeScript}
                 <style>${css}</style>
             </head>
 			<body>
@@ -66,7 +68,35 @@ export function render(data) {
                             </a>
                         </li>
                     </ul>
+                    <div class="theme-picker" hidden>
+                        <span id="theme-label">Theme</span>
+                        <div class="theme-options" role="radiogroup" aria-labelledby="theme-label">
+                            <label><input type="radio" name="theme" value="system" /><span>System</span></label>
+                            <label><input type="radio" name="theme" value="light" /><span>Light</span></label>
+                            <label><input type="radio" name="theme" value="dark" /><span>Dark</span></label>
+                        </div>
+                    </div>
                 </main>
+                <script>
+                    const root = document.documentElement;
+                    const picker = document.querySelector(".theme-picker");
+                    const syncPicker = () => {
+                        picker.querySelector('input[value="' + (root.dataset.theme ?? "system") + '"]').checked = true;
+                    };
+                    picker.hidden = false;
+                    syncPicker();
+                    addEventListener("pageshow", syncPicker);
+                    addEventListener("storage", (event) => event.key === "theme" && syncPicker());
+                    picker.addEventListener("change", (event) => {
+                        const theme = event.target.value;
+                        if (theme === "system") delete root.dataset.theme;
+                        else root.dataset.theme = theme;
+                        try {
+                            if (theme === "system") localStorage.removeItem("theme");
+                            else localStorage.setItem("theme", theme);
+                        } catch {}
+                    });
+                </script>
             </body>
         </html>
     `;

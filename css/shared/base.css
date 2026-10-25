@@ -28,7 +28,7 @@ a {
 }
 
 :focus-visible {
-    outline: 3px solid var(--colour-black);
+    outline: 3px solid var(--border-colour);
     outline-offset: 3px;
 }
 
@@ -167,7 +167,7 @@ footer {
         &:hover,
         &:focus-visible {
             transform: translateY(-3px);
-            border-color: var(--colour-black);
+            border-color: var(--border-colour);
         }
     }
 
@@ -176,7 +176,7 @@ footer {
         background-color: var(--colour-purple);
 
         & svg {
-            fill: var(--icon-fill-colour);
+            fill: var(--colour-black);
         }
     }
     & a:nth-child(2):hover,
@@ -184,7 +184,7 @@ footer {
         background-color: var(--colour-orange);
 
         & svg {
-            fill: var(--icon-fill-colour);
+            fill: var(--colour-black);
         }
     }
     & a:nth-child(3):hover,
@@ -236,7 +236,8 @@ footer {
     display: flex;
     flex-direction: column;
     padding: clamp(1.25rem, 0.6855rem + 3.2258vw, 2.5rem);
-    border: 2px solid var(--colour-black);
+    border: 2px solid var(--border-colour);
+    color: var(--colour-black);
     text-decoration: unset;
     transition: box-shadow 0.1s ease-out;
 }
@@ -300,7 +301,8 @@ footer {
 .post-tag {
     text-transform: capitalize;
     font-weight: 500;
-    border: 2px solid black;
+    border: 2px solid var(--border-colour);
+    color: var(--colour-black);
     padding: 0.5rem 1rem;
     border-radius: 30px;
     text-decoration: unset;
@@ -347,7 +349,7 @@ a[href].header-anchor:hover {
 }
 a[href].header-anchor:focus,
 :hover > a[href].header-anchor {
-    color: var(--colour-black);
+    color: var(--text-colour);
 }
 
 h2 + .header-anchor {

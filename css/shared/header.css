@@ -28,13 +28,19 @@
         &:hover::before,
         &:focus-visible::before {
             background-color: var(--colour-green);
-            border-color: var(--colour-black);
+            border-color: var(--border-colour);
+        }
+
+        &:hover svg,
+        &:focus-visible svg {
+            fill: var(--colour-black);
         }
     }
 
     & svg {
         width: 2rem;
         height: 2rem;
+        fill: var(--icon-fill-colour);
     }
 }
 .header-content .home-link {

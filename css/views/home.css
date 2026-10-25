@@ -33,7 +33,7 @@ nav {
     padding: 0.75rem;
     max-width: fit-content;
     background-color: var(--colour-green);
-    border: 2px solid var(--colour-black);
+    border: 2px solid var(--border-colour);
     transition: background-color 0.2s ease-out;
 
     & svg {
@@ -86,12 +86,13 @@ nav {
 }
 
 .project-item {
+    --project-colour: var(--colour-yellow);
     display: flex;
     flex-direction: column;
-    border: 2px solid var(--colour-black);
+    border: 2px solid var(--border-colour);
     border-radius: 12px;
     overflow: hidden;
-    background-color: var(--colour-paper);
+    background-color: var(--surface-colour);
     color: var(--text-colour);
     text-decoration: unset;
     transition:
@@ -101,7 +102,7 @@ nav {
 .project-item:hover,
 .project-item:focus-visible {
     transform: translate(-5px, -5px);
-    box-shadow: 10px 10px 0px 0px var(--colour-black);
+    box-shadow: 10px 10px 0px 0px light-dark(var(--colour-black), var(--project-colour));
 }
 
 .project-bar {
@@ -109,17 +110,18 @@ nav {
     align-items: center;
     gap: 1rem;
     padding: 0.75rem 1rem;
-    border-bottom: 2px solid var(--colour-black);
-    background-color: var(--colour-yellow);
+    border-bottom: 2px solid var(--border-colour);
+    background-color: var(--project-colour);
+    color: var(--colour-black);
 }
-.project-item:nth-child(4n + 2) .project-bar {
-    background-color: var(--colour-blue);
+.project-item:nth-child(4n + 2) {
+    --project-colour: var(--colour-blue);
 }
-.project-item:nth-child(4n + 3) .project-bar {
-    background-color: var(--colour-orange);
+.project-item:nth-child(4n + 3) {
+    --project-colour: var(--colour-orange);
 }
-.project-item:nth-child(4n + 4) .project-bar {
-    background-color: var(--colour-purple);
+.project-item:nth-child(4n + 4) {
+    --project-colour: var(--colour-purple);
 }
 
 .project-dots {
@@ -174,9 +176,10 @@ nav {
 .project-language {
     margin: 1.25rem auto 0 0;
     padding: 0.25rem 0.75rem;
-    border: 2px solid var(--colour-black);
+    border: 2px solid var(--border-colour);
     border-radius: 30px;
     background-color: var(--colour-green);
+    color: var(--colour-black);
     font-size: clamp(0.75rem, 0.7218rem + 0.1613vw, 0.875rem);
     font-weight: 500;
 }
