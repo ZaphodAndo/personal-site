@@ -10,8 +10,8 @@ export const data = {
 
 export function render() {
     return `
-        <main>
-            <img src="/public/crab404.png" />
+        <main id="skip">
+            <img src="/public/crab404.png" alt="A startled cartoon crab with its mind blown" />
             <h1>404 Page not found</h1>
             <p>
                 Try the <a class="fat-hover-link" href="/">homepage</a> or

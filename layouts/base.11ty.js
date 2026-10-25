@@ -84,7 +84,7 @@ export function render(data) {
                 </script>
             </head>
 			<body>
-                <a href="#skip" class="visually-hidden">Skip to main content</a>
+                <a href="#skip" class="visually-hidden skip-link">Skip to main content</a>
 
                 ${data.content}
 

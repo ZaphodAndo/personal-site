@@ -1,6 +1,7 @@
 import { getFilePath } from "../utils/getFilePath.js";
 import { iconNav } from "../utils/components/iconNav.js";
 import { postsList } from "../utils/components/postsList.js";
+import { projectsList } from "../utils/components/projectsList.js";
 
 const NUMBER_OF_LATEST_POSTS = 4;
 
@@ -19,7 +20,7 @@ export function render(data) {
     return `
         <header>
             <div class="header-content">
-                <a href="/" class="home-link">Hi, I'm Ethan</a>
+                <h1 class="home-link">Hi, I'm Ethan</h1>
                 <p>
                     A frontend developer with an interest in design, specialising in web
                     technology. <br />Working at
@@ -38,6 +39,15 @@ export function render(data) {
                 </div>
     
                 ${postsList({ posts: latestPosts, currentUrl: data.page.url, counterStart: postsCount })}
+            </div>
+
+            <div class="posts projects">
+                <div class="posts-head">
+                    <h2 class="postlist-title">Projects</h2>
+                    <a class="fat-hover-link projects-more" href="https://github.com/ZaphodAndo" target="_blank" rel="noopener noreferrer">More on GitHub</a>
+                </div>
+
+                ${projectsList({ projects: data.projects ?? [] })}
             </div>
         </main>
     `;

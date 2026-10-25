@@ -27,6 +27,11 @@ a {
     color: var(--text-colour-link);
 }
 
+:focus-visible {
+    outline: 3px solid var(--colour-black);
+    outline-offset: 3px;
+}
+
 .fat-hover-link[href] {
     color: var(--text-colour-header);
     text-decoration: unset;
@@ -214,6 +219,8 @@ footer {
         gap: 1.5rem;
     }
     .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
         margin: 0 auto;
     }
 }
@@ -223,7 +230,7 @@ footer {
     margin: 0;
     display: grid;
     gap: clamp(1.88rem, 1.32rem + 3.2vw, 3.12rem);
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
 }
 .postlist-item {
     display: flex;

@@ -60,13 +60,18 @@ export function render(data) {
                     ${tagsHtml}
                 </ul>
 
-                ${data.content}
+                ${data.content.replaceAll('<pre class="language-', '<pre tabindex="0" class="language-')}
             </div>
         </main>
 
-        <div class="post-meta-wrapper">
-            <div class="post-meta">${navHtml}
-            </div>
-        </div>
+        ${
+            navHtml
+                ?   `<nav class="post-meta-wrapper" aria-label="Previous and next posts">
+                        <div class="post-meta">
+                            ${navHtml}
+                        </div>
+                    </nav>`
+                : ""
+        }
     `;
 }

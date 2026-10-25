@@ -30,6 +30,7 @@
 	--colour-green: hsla(94, 48%, 80%, 1);
 	--colour-red: hsla(0, 97%, 77%, 1);
 	--colour-white: hsla(60, 51%, 91%, 1);
+	--colour-paper: hsla(60, 100%, 98%, 1);
 	--colour-orange: hsla(17, 89%, 60%, 1);
 
 	--background-colour: var(--colour-white);

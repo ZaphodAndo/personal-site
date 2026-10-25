@@ -1,0 +1,26 @@
+[
+	{
+		"title": "Hacker News",
+		"description": "A Hacker News PWA.",
+		"language": "TypeScript",
+		"url": "https://hacker-news-blush.vercel.app/"
+	},
+	{
+		"title": "Linqem",
+		"description": "An elegant link aggregator for the web.",
+		"language": "TypeScript",
+		"url": "https://linqem.com/"
+	},
+	{
+		"title": "Scuffed Text",
+		"description": "Converts normal text into scuffed text, perfect for mocking people on the internet.",
+		"language": "Rust",
+		"url": "https://github.com/ZaphodAndo/scuffed-text-rs"
+	},
+	{
+		"title": "Project Fanta",
+		"description": "An SMS subscription and message distribution service built on Twilio.",
+		"language": "C#",
+		"url": "https://github.com/LinqEm/ProjectFanta"
+	}
+]

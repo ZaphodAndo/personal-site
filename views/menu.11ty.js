@@ -40,12 +40,12 @@ export function render(data) {
                 <style>${css}</style>
             </head>
 			<body>
-                <a href="#skip" class="visually-hidden">Skip to main content</a>
+                <a href="#skip" class="visually-hidden skip-link">Skip to main content</a>
                 <header>
                     <h1>Menu</h1>
                     <nav>
-                        <a href="/" onclick="document.referrer ? history.back() : window.location.href = '/'; return false;">
-                            <svg><use href="/public/icons.svg#close-icon" /></svg>
+                        <a href="/" aria-label="Close menu" onclick="document.referrer ? history.back() : window.location.href = '/'; return false;">
+                            <svg aria-hidden="true"><use href="/public/icons.svg#close-icon" /></svg>
                         </a>
                     </nav>
                 </header>
@@ -53,16 +53,16 @@ export function render(data) {
                     <ul>
                         <li class="blog-link">
                             <a href="/blog">
-                                <svg><use href="/public/icons.svg#blog-icon" /></svg>
+                                <svg aria-hidden="true"><use href="/public/icons.svg#blog-icon" /></svg>
                                 <span>Blog</span>
-                                <svg><use href="/public/icons.svg#chevron-icon" /></svg>
+                                <svg aria-hidden="true"><use href="/public/icons.svg#chevron-icon" /></svg>
                             </a>
                         </li>
                         <li class="tags-link">
                             <a href="/tags">
-                                <svg><use href="/public/icons.svg#tag-icon" /></svg>
+                                <svg aria-hidden="true"><use href="/public/icons.svg#tag-icon" /></svg>
                                 <span>Tags</span>
-                                <svg><use href="/public/icons.svg#chevron-icon" /></svg>
+                                <svg aria-hidden="true"><use href="/public/icons.svg#chevron-icon" /></svg>
                             </a>
                         </li>
                     </ul>
