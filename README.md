@@ -1,8 +1,22 @@
-# Personal site
+# 🦀 Personal site
 
-The latest iteration of my personal site and blog.
+The latest iteration of my personal site and blog, live at [ethana.dev](https://ethana.dev/).
 
-## To do
+## 🛠️ Tech
+
+- ⚡ **[Eleventy](https://www.11ty.dev/)** builds the site, with templates written as plain JavaScript (`.11ty.js`).
+- 🎨 **Hand-written CSS**, inlined per page, with light and dark themes using `light-dark()`.
+- 🦋 **Notes** come from my Bluesky posts, read straight from my [atmosphere](https://atproto.com/) account at build time.
+- 📰 **RSS and JSON feeds** for the blog.
+
+## 🚀 Running it
+
+```sh
+npm install
+npm start
+```
+
+## 📝 To do
 
 ### Home
 
@@ -16,10 +30,6 @@ The latest iteration of my personal site and blog.
 ### Settings
 
 1. Cursor trail
-
-### Notes
-
-1. Add notes page
 
 ### General
 
